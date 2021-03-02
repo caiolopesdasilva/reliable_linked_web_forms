@@ -7,8 +7,5 @@ class Development(Config):
 
 class TESTING(Config):
     TESTING=True
+    DEBUG=False
 
-    config = {
-        'development': Development,
-        'testing': TESTING
-    }
