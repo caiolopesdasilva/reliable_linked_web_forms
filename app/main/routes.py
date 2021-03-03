@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template,request
+from ..forms import SignUpForm
 main = Blueprint('main',__name__)
 
 @main.route('/', methods=['GET'])
@@ -8,7 +8,7 @@ def index():
 
 @main.route('/about')
 def about():
-    return 'The about page'
+    return render_template('about.html')
 
 @main.route('/blog')
 def blog():
@@ -17,3 +17,11 @@ def blog():
 @main.route('/blog/<int:blog_id>')
 def blogpost(blog_id):
     return 'This is the blogpost number' + str(blog_id)
+
+@main.route('/signup', methods=['GET','POST'])
+def signup():
+    form = SignUpForm()
+    if form.is_submitted():
+        result = request.form
+        return render_template('user.html', result=result)
+    return render_template('signup.html', form=form)
