@@ -1,19 +1,31 @@
 {%extends 'layout.html'%}
 
 {% block content %}
-<h2> Sign Up</h2>
-<form action="" method="post">
-    <p>
-        {{form.username.label}} <br>
-        {{form.username(size=30)}}
-    </p>
-    <p>
-        {{form.password.label}} <br>
-        {{form.password(size=30)}}
-    </p>
-    <p>
-        {{form.submit()}} <br>
-    </p>
+<section class="about-company-section">
+        <div class="container p-1 p-sm-3">
+             <div class="col12">
+                    <h2>Sign Up</h2>
+                    <hr />
+                </div>
+            <div class="row text-center">
+                <form action="" method="post">
+                    <p>
+                        {{form.username.label}} <br>
+                        {{form.username(size=30)}}
+                    </p>
+                    <p>
+                        {{form.password.label}} <br>
+                        {{form.password(size=30)}}
+                    </p>
+                    <p>
+                        {{form.submit()}} <br>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<
 
 
 {% endblock %}

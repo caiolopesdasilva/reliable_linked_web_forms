@@ -10,9 +10,10 @@ def index():
 def about():
     return render_template('about.html')
 
-@main.route('/blog')
-def blog():
-    return 'This is the blog'
+@main.route('/examples')
+def examples():
+    return render_template('examples.html')
+
 
 @main.route('/blog/<int:blog_id>')
 def blogpost(blog_id):
