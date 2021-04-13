@@ -25,8 +25,8 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#answersTo -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#answersTo">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
     </owl:ObjectProperty>
     
 
@@ -35,7 +35,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAcademicInstitution">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AcademicInstitution"/>
     </owl:ObjectProperty>
     
@@ -45,7 +45,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAgeGroup">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AgeGroup"/>
     </owl:ObjectProperty>
     
@@ -55,7 +55,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasBirthdate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Birthdate"/>
     </owl:ObjectProperty>
     
@@ -65,7 +65,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasClassID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Class"/>
     </owl:ObjectProperty>
     
@@ -75,7 +75,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasContact">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Contact"/>
     </owl:ObjectProperty>
     
@@ -85,7 +85,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasCountry">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Country"/>
     </owl:ObjectProperty>
     
@@ -95,7 +95,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasDegreeName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeName"/>
     </owl:ObjectProperty>
     
@@ -105,7 +105,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasDegreeType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeType"/>
     </owl:ObjectProperty>
     
@@ -115,7 +115,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasEmail">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Email"/>
     </owl:ObjectProperty>
     
@@ -125,7 +125,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasFile">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#File"/>
     </owl:ObjectProperty>
     
@@ -135,7 +135,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasHyperlink">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Hyperlink"/>
     </owl:ObjectProperty>
     
@@ -145,7 +145,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasIdentifier">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Identifier"/>
     </owl:ObjectProperty>
     
@@ -155,7 +155,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasImage">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Image"/>
     </owl:ObjectProperty>
     
@@ -165,8 +165,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasInquiry">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
     </owl:ObjectProperty>
     
 
@@ -175,7 +175,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Name"/>
     </owl:ObjectProperty>
     
@@ -185,7 +185,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOccupation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Occupation"/>
     </owl:ObjectProperty>
     
@@ -195,7 +195,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOrganization">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Organization"/>
     </owl:ObjectProperty>
     
@@ -206,8 +206,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasParticipant">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
     </owl:ObjectProperty>
     
 
@@ -216,8 +216,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
     </owl:ObjectProperty>
     
 
@@ -226,7 +226,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasQualification">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Qualification"/>
     </owl:ObjectProperty>
     
@@ -235,7 +235,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
     </owl:ObjectProperty>
     
 
@@ -243,8 +243,8 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondsTo -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondsTo">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
     </owl:ObjectProperty>
     
 
@@ -289,7 +289,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#answer_id -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#answer_id">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -497,7 +497,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_academic_institution -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_academic_institution">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -506,7 +506,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_contact -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_contact">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -515,7 +515,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_country -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_country">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -524,7 +524,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_country_uid -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_country_uid">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -533,7 +533,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_date_of_birth -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_date_of_birth">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -542,7 +542,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_degree_name -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_degree_name">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -551,7 +551,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_degree_type -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_degree_type">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -560,7 +560,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_email -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_email">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -569,7 +569,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_id -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_id">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>A person&apos;s ID is obligatory</rdfs:comment>
     </owl:DatatypeProperty>
@@ -579,7 +579,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_name -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_name">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A person&apos;s name is obligatory</rdfs:comment>
     </owl:DatatypeProperty>
@@ -589,7 +589,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_occupation -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_occupation">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -598,7 +598,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_qualification -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_qualification">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -607,7 +607,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_university -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_university">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     </owl:DatatypeProperty>
     
@@ -616,7 +616,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_work_organization -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#person_work_organization">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -643,7 +643,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_creationdate -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_creationdate">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -652,7 +652,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_description -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_description">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -661,7 +661,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_enddate -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_enddate">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -671,7 +671,7 @@
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_id">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -680,7 +680,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_name -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_name">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -689,7 +689,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_startdate -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_startdate">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -706,45 +706,10 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0 -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0">
-        <rdfs:comment>An examination of opinions, behaviour, etc., made by asking people questions</rdfs:comment>
-        <rdfs:label>Survey</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA">
-        <rdfs:comment>a sentence worded or expressed so as to elicit information</rdfs:comment>
-        <rdfs:label>Question</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU">
-        <rdfs:comment>Used to represent answers in a survey</rdfs:comment>
-        <rdfs:label>Answer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt">
-        <rdfs:label>Person</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AcademicInstitution -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AcademicInstitution">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>Academic institution is an educational institution dedicated to education and research, which grants academic degrees</rdfs:comment>
     </owl:Class>
     
@@ -753,8 +718,17 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AgeGroup -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AgeGroup">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>People of a similar age, considered as a group</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer">
+        <rdfs:comment>Used to represent answers in a survey</rdfs:comment>
+        <rdfs:label>Answer</rdfs:label>
     </owl:Class>
     
 
@@ -762,7 +736,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Birthdate -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Birthdate">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>The date on which a person was born.</rdfs:comment>
     </owl:Class>
     
@@ -771,7 +745,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Class -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Class">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>Every class in a Degree probably is unique. This should be the identifier.</rdfs:comment>
     </owl:Class>
     
@@ -780,7 +754,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Contact -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Contact">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>a person&apos;s telephone number</rdfs:comment>
     </owl:Class>
     
@@ -789,7 +763,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Country -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Country">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A country a person currently resides in.</rdfs:comment>
     </owl:Class>
     
@@ -798,7 +772,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeName -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeName">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>a full designation of the degree.</rdfs:comment>
     </owl:Class>
     
@@ -807,7 +781,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeType -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeType">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>Type of degree (e.g bachelor, master)</rdfs:comment>
     </owl:Class>
     
@@ -816,7 +790,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Email -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Email">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>a person&apos;s E-mail address</rdfs:comment>
     </owl:Class>
     
@@ -825,7 +799,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#File -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#File">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>Any electronic media content that can be stored.</rdfs:comment>
     </owl:Class>
     
@@ -834,7 +808,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Hyperlink -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Hyperlink">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>a link from a hypertext document to another location, activated by clicking on a highlighted word or image.</rdfs:comment>
     </owl:Class>
     
@@ -843,7 +817,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Identifier -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Identifier">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A person&apos;s unique identifier in the survey&apos;s context (i.g VUnetID)</rdfs:comment>
     </owl:Class>
     
@@ -852,7 +826,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Image -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Image">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A visual representation of something in a eletronic file format (e.g PNG, JPEG, and GIF)</rdfs:comment>
     </owl:Class>
     
@@ -861,7 +835,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Name -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Name">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A word or set of words by which a person or thing is known, addressed, or referred to.</rdfs:comment>
     </owl:Class>
     
@@ -876,7 +850,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Occupation -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Occupation">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A job or profession.</rdfs:comment>
     </owl:Class>
     
@@ -885,8 +859,16 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Organization -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Organization">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>The company name the user currently is enrolled in.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person">
+        <rdfs:label>Person</rdfs:label>
     </owl:Class>
     
 
@@ -894,8 +876,26 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Qualification -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Qualification">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8fa1obTUywOImvhcvH1tqA"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
         <rdfs:comment>A special skill or type of experience or knowledge that makes someone suitable to do a particular job or activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question">
+        <rdfs:comment>a sentence worded or expressed so as to elicit information</rdfs:comment>
+        <rdfs:label>Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey">
+        <rdfs:comment>An examination of opinions, behaviour, etc., made by asking people questions</rdfs:comment>
+        <rdfs:label>Survey</rdfs:label>
     </owl:Class>
     
 
@@ -914,7 +914,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
         <RLWF:respondsTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01"/>
         <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</RLWF:person_country>
@@ -928,7 +928,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <RLWF:survey_creationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-12T18:38:00</RLWF:survey_creationdate>
         <RLWF:survey_description>Survey Number 1</RLWF:survey_description>
         <RLWF:survey_enddate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-16T00:00:00</RLWF:survey_enddate>
@@ -942,7 +942,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
         <RLWF:contact_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">649095862</RLWF:contact_number>
         <RLWF:email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caio.lopes.silva@gmail.com</RLWF:email_address>
@@ -955,7 +955,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/R75PW26s5mD5h7kbv8ikgV0"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <RLWF:survey_creationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-12T22:23:00</RLWF:survey_creationdate>
         <RLWF:survey_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Please fill out this Google Form with your name, hospital, job title and work email address so the vCreate team can share the webinar diary invite with you.</RLWF:survey_description>
         <RLWF:survey_enddate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-12T00:00:00</RLWF:survey_enddate>
@@ -969,7 +969,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/RC2NcmwdEEYaGMNHCIBe6MU"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02"/>
         <RLWF:contact_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</RLWF:contact_number>
         <RLWF:email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tobias@tobias.com</RLWF:email_address>
@@ -982,7 +982,7 @@
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/RDk0HE92re2SngxvJsGDWLt"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02"/>
         <RLWF:respondsTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01"/>
         <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</RLWF:person_country>
