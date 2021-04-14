@@ -51,6 +51,15 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAskPerson -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAskPerson">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AskPerson"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasBenefit -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasBenefit">
@@ -254,6 +263,16 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOpenEnded -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOpenEnded">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OpenEnded"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OpenEnded"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOrganization -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOrganization">
@@ -298,15 +317,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#State"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasTimeofDay -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasTimeofDay">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#TimeofDay"/>
     </owl:ObjectProperty>
     
 
@@ -621,6 +631,14 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOpenEnded -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasOpenEnded">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hyperlink_name -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hyperlink_name">
@@ -875,6 +893,15 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#question_for_person -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#question_for_person">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AskPerson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#state_name -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#state_name">
@@ -958,15 +985,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#time_of_day -->
-
-    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#time_of_day">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#TimeofDay"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1000,6 +1018,14 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer">
         <rdfs:comment>Used to represent answers in a survey</rdfs:comment>
         <rdfs:label>Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AskPerson -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AskPerson">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
     </owl:Class>
     
 
@@ -1186,6 +1212,14 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OpenEnded -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OpenEnded">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Organization -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Organization">
@@ -1234,14 +1268,6 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey">
         <rdfs:comment>An examination of opinions, behaviour, etc., made by asking people questions</rdfs:comment>
         <rdfs:label>Survey</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#TimeofDay -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#TimeofDay">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question"/>
     </owl:Class>
     
 
