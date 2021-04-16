@@ -15,7 +15,7 @@ https://docs.google.com/spreadsheets/d/1ZKy_z69oUVkIStPaG7MKSS4yDBzt6OsDXQHa38S9
 
 ## Paper(WIP)
 
-https://www.overleaf.com/read/qjhppgrcqxmd
+https://www.overleaf.com/read/vjbmbxwnvhmm
 
 ## Contributors
    Caio Lopes da Silva - VU Amsterdam (c.lopesdasilva@student.vu.nl)
