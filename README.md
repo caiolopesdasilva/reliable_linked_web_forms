@@ -9,7 +9,7 @@ The prototype on development is based on Python, Flask and rdflib and uses the R
 
 A snapshot of the google forms surveys used as an example are available on "surveys" folder.
 
-##Planning
+## Planning
 
 https://docs.google.com/spreadsheets/d/1ZKy_z69oUVkIStPaG7MKSS4yDBzt6OsDXQHa38S9xcM/edit?usp=sharing
 
