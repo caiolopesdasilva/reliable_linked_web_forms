@@ -991,16 +991,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondsTo -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondsTo">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3121,7 +3111,10 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
-        <RLWF:respondsTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01"/>
+        <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01R01"/>
+        <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02R01"/>
+        <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03R01"/>
+        <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04R01"/>
         <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</RLWF:person_country>
         <RLWF:person_country_uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q155</RLWF:person_country_uid>
         <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">01</RLWF:person_id>
@@ -3138,12 +3131,11 @@
         <RLWF:hasInquiry rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02"/>
         <RLWF:hasInquiry rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03"/>
         <RLWF:hasInquiry rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04"/>
-        <RLWF:survey_creationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-12T18:38:00</RLWF:survey_creationdate>
+        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-04-27T00:00:00</terms:created>
+        <terms:valid rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00 - 2020-05-05T00:00:00</terms:valid>
         <RLWF:survey_description>Survey Number 1</RLWF:survey_description>
-        <RLWF:survey_enddate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-16T00:00:00</RLWF:survey_enddate>
         <RLWF:survey_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">01</RLWF:survey_id>
         <RLWF:survey_name>FREE RDF Workshop at the Avengers HQ</RLWF:survey_name>
-        <RLWF:survey_startdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-12T00:00:00</RLWF:survey_startdate>
     </owl:NamedIndividual>
     
 
@@ -3157,11 +3149,33 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01R01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01R01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <RLWF:hasSurvey rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01"/>
+        <RLWF:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caio Lopes da Silva</RLWF:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IdentifierQuestion"/>
         <RLWF:question>What is your VUnetID?</RLWF:question>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02R01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02R01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <RLWF:hasSurvey rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02"/>
+        <RLWF:identifier_id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CLA420</RLWF:identifier_id>
     </owl:NamedIndividual>
     
 
@@ -3175,6 +3189,18 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03R01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03R01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
+        <RLWF:hasSurvey rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03"/>
+        <RLWF:country_name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Netherlands</RLWF:country_name>
+        <RLWF:country_name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Q55</RLWF:country_name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04">
@@ -3184,20 +3210,13 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01 -->
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04R01 -->
 
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01R01">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04R01">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
         <RLWF:hasSurvey rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
-        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01"/>
-        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02"/>
-        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03"/>
         <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04"/>
-        <RLWF:contact_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">649095862</RLWF:contact_number>
-        <RLWF:country_name>Netherlands</RLWF:country_name>
-        <RLWF:country_uid>Q55</RLWF:country_uid>
-        <RLWF:identifier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vu/cla420</RLWF:identifier_id>
-        <RLWF:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caio Lopes da Silva</RLWF:name>
+        <RLWF:contact_number rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+ 55 11 98361-1140</RLWF:contact_number>
     </owl:NamedIndividual>
     
 
@@ -3206,25 +3225,11 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
-        <RLWF:survey_creationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-12T22:23:00</RLWF:survey_creationdate>
+        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00</terms:created>
+        <terms:valid rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00 - 2020-05-15T00:00:00</terms:valid>
         <RLWF:survey_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Please fill out this Google Form with your name, hospital, job title and work email address so the vCreate team can share the webinar diary invite with you.</RLWF:survey_description>
-        <RLWF:survey_enddate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-12T00:00:00</RLWF:survey_enddate>
         <RLWF:survey_id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">02</RLWF:survey_id>
         <RLWF:survey_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service Introductory Webinar Registration Form</RLWF:survey_name>
-        <RLWF:survey_startdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-20T00:00:00</RLWF:survey_startdate>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Answer"/>
-        <RLWF:hasSurvey rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02"/>
-        <RLWF:contact_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</RLWF:contact_number>
-        <RLWF:email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tobias@tobias.com</RLWF:email_address>
-        <RLWF:identifier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vu/tkh120</RLWF:identifier_id>
-        <RLWF:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tobias</RLWF:name>
     </owl:NamedIndividual>
     
 
@@ -3234,7 +3239,6 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Person"/>
         <RLWF:answersTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02"/>
-        <RLWF:respondsTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02R01"/>
         <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</RLWF:person_country>
         <RLWF:person_country_uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q39</RLWF:person_country_uid>
         <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">02</RLWF:person_id>
