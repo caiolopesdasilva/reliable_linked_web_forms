@@ -1838,19 +1838,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswersFrom -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswersFrom">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson"/>
     
 
 
@@ -1876,7 +1866,6 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasSurvey">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
     </owl:ObjectProperty>
     
@@ -1885,7 +1874,6 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
     </owl:ObjectProperty>
     
@@ -3258,8 +3246,8 @@ A primary source relation is a particular case of derivation of secondary materi
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment>Used to represent the answer instance of an individual in a Survey</rdfs:comment>
         <rdfs:label>SurveyAnswer</rdfs:label>
-        <owl:deprecated>Used to represent the answer instance of an individual in a Survey</owl:deprecated>
     </owl:Class>
     
 
@@ -4025,12 +4013,53 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</RLWF:person_country>
+        <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">06</RLWF:person_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</RLWF:person_country>
+        <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">05</RLWF:person_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Luke_Cage -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Luke_Cage">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</RLWF:person_country>
+        <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">04</RLWF:person_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Matt_Murdock -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Matt_Murdock">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <RLWF:person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</RLWF:person_country>
+        <RLWF:person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">03</RLWF:person_id>
+        <RLWF:person_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthew Michael Murdock</RLWF:person_name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
         <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01"/>
         <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01"/>
         <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02"/>
         <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03"/>
@@ -4038,8 +4067,6 @@ A primary source relation is a particular case of derivation of secondary materi
         <RLWF:survey_description>Survey Number 1</RLWF:survey_description>
         <RLWF:survey_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">01</RLWF:survey_id>
         <RLWF:survey_name>FREE RDF Workshop at the Avengers HQ</RLWF:survey_name>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-04-27T00:00:00</terms:created>
-        <terms:valid rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00 - 2020-05-05T00:00:00</terms:valid>
     </owl:NamedIndividual>
     
 
@@ -4048,7 +4075,18 @@ A primary source relation is a particular case of derivation of secondary materi
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <RLWF:hasAnswersFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02"/>
     </owl:NamedIndividual>
     
 
@@ -4058,6 +4096,7 @@ A primary source relation is a particular case of derivation of secondary materi
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion"/>
         <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
         <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Name?</RLWF:hasText>
     </owl:NamedIndividual>
     
@@ -4073,11 +4112,22 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Carton Cage</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IdentifierQuestion"/>
         <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
         <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your VUnetID?</RLWF:hasText>
     </owl:NamedIndividual>
     
@@ -4093,11 +4143,22 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JCC950</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion"/>
         <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
         <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What country are you currently in?</RLWF:hasText>
     </owl:NamedIndividual>
     
@@ -4113,11 +4174,22 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States of America, Q30</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ContactNumberQuestion"/>
         <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
         <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your contact number?</RLWF:hasText>
     </owl:NamedIndividual>
     
@@ -4129,6 +4201,16 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
         <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
         <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+55 11 98361-1140</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+31 6 49095862</RLWF:hasAnswer>
     </owl:NamedIndividual>
     
 
@@ -4146,6 +4228,309 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
+        <prov:wasDerivedFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05"/>
+        <RLWF:hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06"/>
+        <RLWF:survey_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Due to the success of our first Webinar in April we present the ultimate webinar for the Semantic Web, where we will go thorugh all the essential topics needed to understand how it works. It will be mainly hosted on Zoom.</RLWF:survey_description>
+        <RLWF:survey_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">03</RLWF:survey_id>
+        <RLWF:survey_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Webinar</RLWF:survey_name>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Webinar</terms:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
+        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Full name?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caio Silva</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Cage</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacob Keyes</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OrganizationQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What company do you represent?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facebook, Inc. (Q380)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vrije Universiteit Amsterdam (Q1065414)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World Wide Web Consortium (Q37033)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DegreeNameQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Degree?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science (Q21198)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Sciences (Q16387)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Business Administration (Q191701)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EmailQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your e-mail address?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c.lopesdasilva@student.vu.nl</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jc@student.vu.nl</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jkeys@student.nl</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What country are you currently in?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States of America (Q30)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands (Q55)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brasil (Q155)</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasQuestionAnswer rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do you have any suggestions for topics in the webinar?</RLWF:hasText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A01">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We could maybe discuss about best practices</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A02">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maybe 20 minutes in the end with breakout rooms to discuss a bit about the topic.</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A03">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <RLWF:isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
+        <RLWF:hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</RLWF:hasAnswer>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn">
@@ -4158,11 +4543,79 @@ A primary source relation is a particular case of derivation of secondary materi
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey -->
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01 -->
 
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01">
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-05T10:33:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ed0a8790-3c8b-4e63-9fb1-356dd47ce86b -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ed0a8790-3c8b-4e63-9fb1-356dd47ce86b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-07T11:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-02T11:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T16:00:00</prov:atTime>
     </owl:NamedIndividual>
     
 
@@ -4177,8 +4630,8 @@ A primary source relation is a particular case of derivation of secondary materi
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
         <rdfs:label xml:lang="en">Agent</rdfs:label>
-        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/AgentClass">
@@ -4201,10 +4654,10 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-box/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/FileFormat">
-        <rdfs:comment xml:lang="en">A digital resource format.</rdfs:comment>
         <rdfs:label xml:lang="en">File Format</rdfs:label>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">A digital resource format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Frequency">
         <rdfs:label xml:lang="en">Frequency</rdfs:label>
@@ -4221,23 +4674,23 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO639-2">
         <rdfs:seeAlso rdf:resource="http://lcweb.loc.gov/standards/iso639-2/langhome.html"/>
-        <rdfs:comment xml:lang="en">The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">ISO 639-2</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO639-3">
-        <rdfs:label xml:lang="en">ISO 639-3</rdfs:label>
         <rdfs:comment xml:lang="en">The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">ISO 639-3</rdfs:label>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:seeAlso rdf:resource="http://www.sil.org/iso639-3/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Jurisdiction">
         <rdfs:label xml:lang="en">Jurisdiction</rdfs:label>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The extent or range of judicial, law enforcement, or other authority.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -4266,8 +4719,8 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MediaType">
         <rdfs:comment xml:lang="en">A file format or physical medium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Media Type</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
@@ -4277,8 +4730,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MethodOfAccrual">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A method by which resources are added to a collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Method of Accrual</rdfs:label>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
@@ -4322,8 +4775,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Policy">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Policy</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
@@ -4400,8 +4853,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <rdf:Description rdf:about="http://purl.org/dc/terms/abstract">
         <rdfs:label xml:lang="en">Abstract</rdfs:label>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A summary of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accessRights">
         <terms:description xml:lang="en">Access Rights may include information regarding access or restrictions based on privacy, security, or other policies.</terms:description>
@@ -4415,8 +4868,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:label xml:lang="en">Accrual Method</rdfs:label>
         <terms:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)].</terms:description>
         <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MethodOfAccrual"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
@@ -4447,8 +4900,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:label xml:lang="en">Audience</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:description xml:lang="en">Recommended practice is to use this property with non-literal values from a vocabulary of audience types.</terms:description>
-        <rdfs:comment xml:lang="en">A class of agents for whom the resource is intended or useful.</rdfs:comment>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+        <rdfs:comment xml:lang="en">A class of agents for whom the resource is intended or useful.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/available">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -4535,8 +4988,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <rdf:Description rdf:about="http://purl.org/dc/terms/description">
         <rdfs:label xml:lang="en">Description</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/educationLevel">
@@ -4556,9 +5009,9 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/format">
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MediaType"/>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
-        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
         <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Format</rdfs:label>
@@ -4567,8 +5020,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of.</terms:description>
         <rdfs:label xml:lang="en">Has Format</rdfs:label>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -4578,8 +5031,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasVersion">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Has Version</rdfs:label>
         <terms:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
@@ -4600,8 +5053,8 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
         <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Has Part.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
     </rdf:Description>
@@ -4628,10 +5081,10 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isVersionOf">
         <rdfs:label xml:lang="en">Is Version Of</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource of which the described resource is a version, edition, or adaptation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">A related resource of which the described resource is a version, edition, or adaptation.</rdfs:comment>
         <terms:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
         <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
@@ -4651,8 +5104,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <rdf:Description rdf:about="http://purl.org/dc/terms/license">
         <terms:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</terms:issued>
-        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <rdfs:label xml:lang="en">License</rdfs:label>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
@@ -4668,16 +5121,16 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
         <rdfs:label xml:lang="en">Medium</rdfs:label>
-        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PhysicalResource"/>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Modified</rdfs:label>
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
@@ -4688,8 +5141,8 @@ A primary source relation is a particular case of derivation of secondary materi
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/references">
         <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By.</terms:description>
-        <rdfs:comment xml:lang="en">A related resource that is referenced, cited, or otherwise pointed to by the described resource.</rdfs:comment>
         <rdfs:label xml:lang="en">References</rdfs:label>
+        <rdfs:comment xml:lang="en">A related resource that is referenced, cited, or otherwise pointed to by the described resource.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
@@ -4718,8 +5171,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Rights</rdfs:label>
-        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
         <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided.</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/source">
@@ -4730,8 +5183,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
@@ -4744,8 +5197,8 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/tableOfContents">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A list of subunits of the resource.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Table Of Contents</rdfs:label>
     </rdf:Description>
@@ -4770,22 +5223,22 @@ A primary source relation is a particular case of derivation of secondary materi
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/valid">
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
         <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:label xml:lang="en">Date Valid</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#specializationOf">
+        <rdfs:label>specializationOf</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#alternateOf"/>
         <prov:constraints rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</prov:constraints>
-        <rdfs:label>specializationOf</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
         <prov:category>expanded</prov:category>
         <prov:dm rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization</prov:dm>
         <prov:definition xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity.</prov:definition>
-        <prov:component>alternate</prov:component>
         <prov:inverse>generalizationOf</prov:inverse>
+        <prov:component>alternate</prov:component>
         <prov:n rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization</prov:n>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
