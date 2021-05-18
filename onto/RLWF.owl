@@ -41,546 +41,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/coverage -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/coverage"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/format -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/language -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/publisher -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/relation -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/relation"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/rights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/subject -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/type -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/abstract -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/accessRights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accessRights">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/accrualMethod -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualMethod">
-        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
-        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/accrualPolicy -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualPolicy">
-        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/alternative -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/alternative">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/audience -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/audience"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/available -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/available">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/bibliographicCitation -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/conformsTo -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/coverage -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/coverage">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/dateAccepted -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateAccepted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/dateCopyrighted -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/dateSubmitted -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/educationLevel -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/educationLevel">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/audience"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/extent -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/extent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/format -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/hasFormat -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/hasPart -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasPart">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/hasVersion -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isFormatOf -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isFormatOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isPartOf -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isReferencedBy -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReferencedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isReplacedBy -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReplacedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isRequiredBy -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isRequiredBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/isVersionOf -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/language -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/mediator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/mediator">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/audience"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/medium -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/medium">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/publisher -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/references -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/relation -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/relation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/replaces -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/requires -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/requires">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/rights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/source"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/spatial -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/spatial">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/subject -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/tableOfContents -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/tableOfContents">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/temporal -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/temporal">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/type -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/type">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/valid -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/valid">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
@@ -803,75 +263,9 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
     
 
 
-    <!-- http://purl.org/dc/terms/Box -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/Box"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/ISO3166 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/ISO3166"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/ISO639-2 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/ISO639-2"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/ISO639-3 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/ISO639-3"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/Period -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/Period"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/Point -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/Point"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/RFC1766 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/RFC1766"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/RFC3066 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/RFC3066"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/RFC4646 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/RFC4646"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/RFC5646 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/RFC5646"/>
-    
-
-
     <!-- http://purl.org/dc/terms/URI -->
 
     <rdfs:Datatype rdf:about="http://purl.org/dc/terms/URI"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/W3CDTF -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/W3CDTF"/>
     
 
 
@@ -1749,18 +1143,12 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswerFromQuestion -->
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswerInstance -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswerFromQuestion">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswerInstance">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasPerson"/>
     
 
 
@@ -1773,19 +1161,20 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasSurvey -->
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasResponse -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasSurvey">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasResponse">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom -->
+    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasSurveyResponse -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#isAnswerFrom">
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasSurveyResponse">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
     </owl:ObjectProperty>
     
 
@@ -1805,6 +1194,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/alternative">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The distinction between titles and alternative titles is application-specific.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative Title</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1813,6 +1205,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#dcterms"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
+        <rdfs:label>Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1821,6 +1216,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#dcterms"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1829,6 +1227,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#dcterms"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2090,16 +1491,6 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_name -->
-
-    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey_name">
-        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#survey"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2211,7 +1602,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AcademicInformationQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can be used to state type of degree (e.g bachelor, master) with varying levels of information accepted (e.g MSc Information Sciences at the university of XXX, Bsc Computer Science)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used to state type of degree (e.g bachelor, master) with varying levels of information accepted (e.g MSc Information Sciences at the university of XXX, Bsc Computer Science)</rdfs:comment>
     </owl:Class>
     
 
@@ -2220,7 +1611,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AddressQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This question is used to help better build the demopgraphic profile and the survey and sometimes used for a security check.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This question is used to help better build the demopgraphic profile and the survey and sometimes used for a security check.</rdfs:comment>
     </owl:Class>
     
 
@@ -2229,6 +1620,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AskPersonQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+        <rdfs:comment xml:lang="en">Questions that can be directed towards the speaker of the event that might lead to unique discussions. For example &quot;Any Questions for the Speaker?&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -2237,7 +1629,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BenefitQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>&quot;what are your expectations from this talk?&quot; or &quot;What do you hope to gain from this webinar?&quot; type of questions</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used to measure the expected experience in the event. &quot;what are your expectations from this talk?&quot; or &quot;What do you hope to gain from this webinar?&quot; type of questions.</rdfs:comment>
     </owl:Class>
     
 
@@ -2246,7 +1638,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BirthdateQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>The date on which a person was born.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used to better build the demographic profile. This type is usually used to know the age of the respondent.</rdfs:comment>
     </owl:Class>
     
 
@@ -2255,7 +1647,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BooleanQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>For every Yes or No type of questions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used for questions where two answer are possible, usually Yes or No.</rdfs:comment>
     </owl:Class>
     
 
@@ -2264,6 +1656,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CityQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+        <rdfs:comment xml:lang="en">Can be used to ask the current city of the respondent.</rdfs:comment>
     </owl:Class>
     
 
@@ -2272,7 +1665,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CommunicationChannelQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>&apos;How did you hear about this event?&apos; type of questions</rdfs:comment>
+        <rdfs:comment xml:lang="en">This asks the source of acknolegment of the event by the respondent. For example &quot;How did you hear about this event?&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -2281,7 +1674,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ContactNumberQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>a person&apos;s telephone number</rdfs:comment>
+        <rdfs:comment xml:lang="en">The respondent&apos;s telephone number. This type can also be used for demographic purposes.</rdfs:comment>
     </owl:Class>
     
 
@@ -2290,7 +1683,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>A country a person currently resides in.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This instance can be used to state the country a person currently resides in or the country of origin.</rdfs:comment>
     </owl:Class>
     
 
@@ -2299,6 +1692,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DateQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+        <rdfs:comment xml:lang="en">Any question asking something that can be answered with a date. For example &quot;what dates are the suggested best?&quot; &quot;what time are you available?&quot;.</rdfs:comment>
     </owl:Class>
     
 
@@ -2307,7 +1701,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DepartmentQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>&quot;a division of a large organization such as a government, university, or business, dealing with a specific area of activity.&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">A specific section within an organization (e.g Department of Computer Science in an university).</rdfs:comment>
     </owl:Class>
     
 
@@ -2316,7 +1710,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EmailQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>a person&apos;s E-mail address</rdfs:comment>
+        <rdfs:comment xml:lang="en">A persons e-mail address. Can be used to enhance the communication with the participant or for marketing purposes.</rdfs:comment>
     </owl:Class>
     
 
@@ -2325,7 +1719,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EventQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>When there is more than one event that can be selected in a survey</rdfs:comment>
+        <rdfs:comment xml:lang="en">This type can be used to display the availability of one or more events.</rdfs:comment>
     </owl:Class>
     
 
@@ -2334,7 +1728,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#FileQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>Any electronic media content that can be stored.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used for file upload.</rdfs:comment>
     </owl:Class>
     
 
@@ -2343,6 +1737,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#GenderQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
+        <rdfs:comment xml:lang="en">Can be used to know the gender of the participant.</rdfs:comment>
     </owl:Class>
     
 
@@ -2351,7 +1746,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#HyperlinkQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>a link from a hypertext document to another location, activated by clicking on a highlighted word or image.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used for URLs such as social networks.</rdfs:comment>
     </owl:Class>
     
 
@@ -2360,7 +1755,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IdentifierQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>A person&apos;s unique identifier in the survey&apos;s context (i.g VUnetID)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A person&apos;s unique identifier in the form&apos;s context(e.g University Log-in ID).</rdfs:comment>
     </owl:Class>
     
 
@@ -2369,6 +1764,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#LastNameQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion"/>
+        <rdfs:comment xml:lang="en">A person&apos;s last name.</rdfs:comment>
     </owl:Class>
     
 
@@ -2377,7 +1773,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>A word or set of words by which a person or thing is known, addressed, or referred to.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A person&apos;s first name.</rdfs:comment>
     </owl:Class>
     
 
@@ -2386,7 +1782,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OrganizationQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>The company name the user currently is enrolled in.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The company name the user currently represents.</rdfs:comment>
     </owl:Class>
     
 
@@ -2395,7 +1791,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ProfessionalInformationQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can be used to state the area of expertise of the respondent (i.g Senior Data Analyst, Junior C# Developer)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used to state the area of expertise of the respondent (i.g Senior Data Analyst, Junior C# Developer).</rdfs:comment>
     </owl:Class>
     
 
@@ -2433,7 +1829,9 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment>a sentence worded or expressed so as to elicit information</rdfs:comment>
+        <rdfs:comment xml:lang="en">a sentence worded or expressed so as to elicit information
+
+can be used for generalized Questions that doesn&apos;t fit in any of the other types of questions.</rdfs:comment>
         <rdfs:label>SurveyQuestion</rdfs:label>
     </owl:Class>
     
@@ -2452,7 +1850,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#WhyAttendQuestion">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <rdfs:comment>Why do you want to attend this webinar? question</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be asked to understand why the respondent is participating on this event.</rdfs:comment>
     </owl:Class>
     
 
@@ -2470,23 +1868,13 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 
     <!-- http://purl.org/dc/terms/ -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/">
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
-        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
-        <terms:title xml:lang="en">DCMI Metadata Terms - other</terms:title>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/"/>
     
 
 
     <!-- http://purl.org/dc/terms/URI -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -2517,605 +1905,6 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     
 
 
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</person_country>
-        <person_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caio Lopes da Silva</person_name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</person_country>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</person_country>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Luke_Cage -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Luke_Cage">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</person_country>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Matt_Murdock -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Matt_Murdock">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</person_country>
-        <person_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthew Michael Murdock</person_name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04"/>
-        <survey_description>Survey Number 1</survey_description>
-        <survey_name>FREE RDF Workshop at the Avengers HQ</survey_name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Name?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswer>Caio Lopes da Silva</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q01A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Carton Cage</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IdentifierQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your VUnetID?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLA420</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q02A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JCC950</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What country are you currently in?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands, Q55</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q03A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States of America, Q30</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ContactNumberQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your contact number?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+55 11 98361-1140</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01Q04A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+31 6 49095862</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
-        <survey_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Please fill out this Google Form with your name, hospital, job title and work email address so the vCreate team can share the webinar diary invite with you.</survey_description>
-        <survey_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service Introductory Webinar Registration Form</survey_name>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00</terms:created>
-        <terms:valid rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-05-01T00:00:00 - 2020-05-15T00:00:00</terms:valid>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Survey"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
-        <prov:wasDerivedFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S01"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05"/>
-        <hasQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06"/>
-        <survey_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Due to the success of our first Webinar in April we present the ultimate webinar for the Semantic Web, where we will go thorugh all the essential topics needed to understand how it works. It will be mainly hosted on Zoom.</survey_description>
-        <survey_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Webinar</survey_name>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Webinar</terms:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyAnswer"/>
-        <prov:wasAttributedTo rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Full name?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caio Silva</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Cage</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q01A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacob Keyes</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OrganizationQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What company do you represent?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facebook, Inc. (Q380)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vrije Universiteit Amsterdam (Q1065414)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q02A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World Wide Web Consortium (Q37033)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03">
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your Degree?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science (Q21198)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Sciences (Q16387)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q03A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Business Administration (Q191701)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EmailQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is your e-mail address?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c.lopesdasilva@student.vu.nl</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jc@student.vu.nl</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q04A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jkeys@student.nl</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What country are you currently in?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States of America (Q30)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands (Q55)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q05A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brasil (Q155)</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestion"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswerFromQuestion rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do you have any suggestions for topics in the webinar?</hasText>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A01">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A01"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We could maybe discuss about best practices</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A02">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A02"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maybe 20 minutes in the end with breakout rooms to discuss a bit about the topic.</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03Q06A03">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#SurveyQuestionAnswer"/>
-        <isAnswerFrom rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#S03A03"/>
-        <hasAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</hasAnswer>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
-        <person_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</person_country>
-        <person_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tobias Kuhn</person_name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey01">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-05T10:33:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#createSurvey03">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Tobias_Kuhn"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A01">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:00:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey01A02">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:00:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A01">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Caio_Silva"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-07T11:00:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A02">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Johnny_Cage"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-02T11:00:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#respondToSurvey03A03">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <prov:wasAssociatedWith rdf:resource="https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Jacob_Keyes"/>
-        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T16:00:00</prov:atTime>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3127,26 +1916,8 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
     <rdf:Description rdf:about="http://purl.org/dc/terms/URI">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.</rdfs:comment>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc3986.txt"/>
         <rdfs:label xml:lang="en">URI</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/alternative">
-        <rdfs:comment>The distinction between titles and alternative titles is application-specific.</rdfs:comment>
-        <rdfs:label xml:lang="en">Alternative Title</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
-        <rdfs:label xml:lang="en">Date</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:label>Identifier</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:label xml:lang="en">Title</rdfs:label>
-        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#specializationOf">
         <prov:constraints rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</prov:constraints>
