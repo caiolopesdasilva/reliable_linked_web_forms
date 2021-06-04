@@ -1,11 +1,5 @@
 {%extends 'layout.html'%}
 
-
-
-
-
-
-
 {% block content %}
 <body>
 <!--    <section class="top-section">-->
@@ -16,19 +10,26 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <section class="examples">
+    <section class="example-form">
         <div class="container p-1 p-sm-3">
              <div class="col12">
                     <h2>Examples</h2>
                     <hr />
                 </div>
             <div class="row">
-                <ul class="examples-list p-1 p-sm-3">
-                    <a href="#"><li>Something1</li></a>
-                    <a href="#"><li>Something2</li></a>
-                    <a href="#"><li>Something3</li></a>
-                    <a href="#"><li>Something4</li></a>
-                </ul>
+                <form action="" method="post">
+                    <p>
+                        {{form.username.label}} <br>
+                        {{form.username(size=30)}}
+                    </p>
+                    <p>
+                        {{form.password.label}} <br>
+                        {{form.password(size=30)}}
+                    </p>
+                    <p>
+                        {{form.submit()}} <br>
+                    </p>
+                </form>
             </div>
         </div>
     </section>
