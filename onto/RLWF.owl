@@ -905,6 +905,13 @@ RLWF:form_startdate rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:dateTime .
 
 
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#form_title
+RLWF:form_title rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf RLWF:form ;
+                rdfs:domain RLWF:Form ;
+                rdfs:range xsd:string .
+
+
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#individual_answer
 RLWF:individual_answer rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf RLWF:questionanswer ;
@@ -1550,9 +1557,9 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-prov:specializationOf rdfs:label "specializationOf" ;
-                      rdfs:seeAlso prov:alternateOf ;
+prov:specializationOf rdfs:seeAlso prov:alternateOf ;
                       prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                      rdfs:label "specializationOf" ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                       prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
                       prov:category "expanded" ;
