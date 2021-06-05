@@ -1288,7 +1288,8 @@ RLWF:F01 rdf:type owl:NamedIndividual ,
          RLWF:form_description "Webinar will be hosted via Zoom with Scott Lang being the host. Max of 10 persons, so fill the form fast!"^^xsd:string ;
          RLWF:form_enddate "2021-06-05T10:24:00"^^xsd:dateTime ;
          RLWF:form_limiter "10"^^xsd:int ;
-         RLWF:form_startdate "2021-06-05T10:24:00"^^xsd:dateTime .
+         RLWF:form_startdate "2021-06-05T10:24:00"^^xsd:dateTime ;
+         RLWF:form_title "FREE RDF Webinar at the Avengers HQ"^^xsd:string .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#F01A01
@@ -1476,9 +1477,10 @@ RLWF:F01Q06 rdf:type owl:NamedIndividual ,
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#F02
 RLWF:F02 rdf:type owl:NamedIndividual ,
                   RLWF:Form ;
-         RLWF:form_description "Test"^^xsd:string ;
+         RLWF:form_description "Blockchain introduction for all."^^xsd:string ;
          RLWF:form_enddate "2021-06-15T23:59:59"^^xsd:dateTime ;
-         RLWF:form_startdate "2021-05-15T14:10:55"^^xsd:dateTime .
+         RLWF:form_startdate "2021-05-15T14:10:55"^^xsd:dateTime ;
+         RLWF:form_title "Blockchain education for all."^^xsd:string .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#GridQuestionType
