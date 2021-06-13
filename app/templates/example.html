@@ -1,33 +1,34 @@
 {%extends 'layout.html'%}
 
+
+
 {% block content %}
 <body>
-<!--    <section class="top-section">-->
-<!--        <div class="container p-1 p-sm-3">-->
-<!--            <div class="col12">-->
-<!--                <h2>Examples</h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-    <section class="example-form">
-        <div class="container p-1 p-sm-3">
-             <div class="col12">
-                    <h2>Examples</h2>
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </form>
-            </div>
+<section class="about-company-section">
+    <div class="container p-1 p-sm-3">
+        <div class="col12">
+            <h2>Form Examples</h2>
+            <hr />
         </div>
-    </section>
+        <div class="row">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="title_select">Select a form below</label>
+                    <select class="form-control" data-width="100%" id="title_select" name="selected_title">
+                        {% for x in titles %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+                    </select>
+                    </br>
+                    <button type="submit" class="btn btn-primary t-5">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" charset="utf-8">
+
+</script>
+
 </body>
 {% endblock %}

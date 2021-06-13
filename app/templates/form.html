@@ -1,0 +1,22 @@
+{%extends 'layout.html'%}
+
+
+{% block content %}
+<body>
+<section class="example-form">
+    <div class="container p-1 p-sm-3">
+        <div class="col">
+            <h2>Examples</h2>
+            <p>Here is my variable: {{ selected_form }}</p>
+            <div>
+                <fieldset disabled>
+                    {% for x in selected_form %}
+                    <input class="form-control mx-sm-3 mb-2" type="text" placeholder="{{x}}"  readonly>
+                    {% endfor %}
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+{% endblock %}
