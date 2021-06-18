@@ -2,7 +2,79 @@
 
 {% block content %}
 
+<body>
+<section class="about-company-section">
+    <div class="container p-1 p-sm-3">
+        <div class="col12">
+            <h2>Question Explorer</h2>
+            <hr/>
+        </div>
+        <div class="row">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="question_select">Select a form below</label>
+                    <select class="form-control" data-width="100%" id="question_select" name="question_select"
+                            value="{{question_select}}">
+                        {% for x in list_of_questions %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+
+                        <!--                        {% if  question_select != "" %}-->
+                        <!--                        <option selected="selected">{{question_select}}</option> &lt;!&ndash; maybe a bit rough but it works &ndash;&gt;-->
+                        <!--                        {% endif %}-->
+                    </select>
+                    </br>
+                    <button type="submit" class="btn btn-primary t-5">Submit</button>
+                </div>
+            </form>
+        </div>
+        <hr class="my-4">
+
+        {% if isIndex %}
+        <form>
+
+            <div class="form-group">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="q_comment">Question Comments</label>
+                            <input type="text" readonly class="form-control" id="q_comment"
+                                   placeholder="{{comments}}">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            {% if question_select == "CountryQuestion" %}
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="country_answer"><strong>Countries that are queried from Wikidata</strong></label>
+                    <select class="form-control" data-width="100%" id="country_answer" name="country_answer">
+                        {% for z in countries %}
+                        <option>{{z}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            {% else %}
+
+            <label for="available_answers"><strong>Available Answers</strong></label>
+            <input type="text" class="form-control" id="available_answers" name="available_answers" placeholder="">
 
 
+            {% endif %}
+            {% endif %}
+
+        </form>
+    </div>
+    </div>
+
+
+
+</section>
+
+
+</body>
 
 {% endblock %}

@@ -2,20 +2,115 @@
 
 
 {% block content %}
+
 <body>
 <section class="example-form">
     <div class="container p-1 p-sm-3">
-        <div class="col">
-            <h2>Examples</h2>
-            <p>Here is my variable: {{ selected_form }}</p>
-            <div>
-                <fieldset disabled>
-                    {% for x in selected_form %}
-                    <input class="form-control mx-sm-3 mb-2" type="text" placeholder="{{x}}"  readonly>
-                    {% endfor %}
-                </fieldset>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="form_title">Form Title</label>
+                    <input type="text" readonly class="form-control" id="form_title" placeholder="{{selected_form[0]}}">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="form_order">Form Counter</label>
+                    <input type="text" readonly class="form-control" id="form_order" placeholder="{{selected_form[1]}}">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="form_strdate">Start Date</label>
+                    <input type="text" readonly class="form-control" id="form_strdate"
+                           placeholder="{{selected_form[3]}}">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="form_enddate">End Date</label>
+                    <input type="text" readonly class="form-control" id="form_enddate"
+                           placeholder="{{selected_form[4]}}">
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="form_desc">Form Description</label>
+                <input type="text" readonly class="form-control" id="form_desc" placeholder="{{selected_form[2]}}">
+            </div>
+        </form>
+    </div>
+
+    <div class="container p-1 p-sm-3">
+        <hr class="my-4">
+        <form action="#" method="post">
+            {% for i in range(counters| length) %}
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="question_type">Question Type</label>
+                    <input type="text" readonly class="form-control" id="question_type" placeholder="{{q_types[i]}}">
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="question_counter">Counter</label>
+                    <input type="text" readonly class="form-control" id="question_counter"
+                           placeholder="{{counters[i]}}">
+                </div>
+            </div>
+
+
+            {% if q_types[i] == "CountryQuestion" %}
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="title_select"><strong>{{counters[i]}}. {{questions[i]}}</strong></label>
+                    <select class="form-control" data-width="100%" id="title_select" name="selected_country">
+                        {% for z in countries %}
+                        <option>{{z}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            {% elif q_types[i] == "AcademicInformationQuestion" %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="degree_select"><strong>{{counters[i]}}. {{questions[i]}} (Degree)</strong></label>
+                    <select class="form-control" data-width="100%" id="degree_select" name="degree_select">
+                        {% for x in degrees %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="university_select"><strong>(University)</strong></label>
+                    <select class="form-control" data-width="100%" id="university_select"
+                            name="university_select">
+                        {% for x in nl_universities %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+
+            {% elif q_types[i] == "CommunicationChannelQuestion" %}
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="communication_channel_select"><strong>{{counters[i]}}. {{questions[i]}}</strong></label>
+                    <select class="form-control" data-width="100%" id="communication_channel_select"
+                            name="communication_channel_select">
+                        {% for x in communication_channels %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            {% else %}
+
+                    <label for="question_desc{{i}}"><strong>{{counters[i]}}. {{questions[i]}}</strong></label>
+                    <input type="text" class="form-control" id="question_desc{{i}}" name="answer{{i}}" placeholder="">
+
+            {% endif %}
+            {% endfor %}
+
+
+            <hr class="my-4">
+            <button type="submit" class="btn btn-primary t-5">Submit Response</button>
+
+        </form>
     </div>
 </section>
 </body>

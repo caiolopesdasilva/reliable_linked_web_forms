@@ -12,8 +12,8 @@
 @base <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl> .
 
 <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl> rdf:type owl:Ontology ;
-                                                                                                   rdfs:comment "Teste"^^xsd:string ;
-                                                                                                   rdfs:seeAlso <http://www.w3.org/TR/prov-o/> .
+                                                                                                   rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ;
+                                                                                                   owl:deprecated "https://github.com/caiolopesdasilva/reliable_linked_web_forms" .
 
 #################################################################
 #    Annotation properties
@@ -175,8 +175,8 @@ prov:wasRevisionOf rdf:type owl:AnnotationProperty ;
                    rdfs:range prov:Entity .
 
 
-###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#rlwf:containsWDT
-RLWF:rlwf:containsWDT rdf:type owl:AnnotationProperty .
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#containsWDT
+RLWF:containsWDT rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1042,14 +1042,15 @@ RLWF:AcademicInformationQuestion rdf:type owl:Class ;
                                  rdfs:subClassOf RLWF:Question ;
                                  rdfs:comment "Can be used to state type of degree (e.g bachelor, master) with varying levels of information accepted (e.g MSc Information Sciences at the university of XXX, Bsc Computer Science)"@en ;
                                  rdfs:label "AcademicInformationQuestion" ;
-                                 RLWF:rlwf:containsWDT "1"^^xsd:int .
+                                 RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AddressQuestion
 RLWF:AddressQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "This question is used to help better build the demopgraphic profile and sometimes used for a security check."@en ;
-                     rdfs:label "AddressQuestion" .
+                     rdfs:label "AddressQuestion" ;
+                     RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AnswerCluster
@@ -1063,35 +1064,40 @@ RLWF:AnswerCluster rdf:type owl:Class ;
 RLWF:AskPersonQuestion rdf:type owl:Class ;
                        rdfs:subClassOf RLWF:Question ;
                        rdfs:comment "Questions that can be directed towards the speaker of the event that might lead to unique discussions. For example \"Any Questions for the Speaker?\""@en ;
-                       rdfs:label "AskPersonQuestion" .
+                       rdfs:label "AskPersonQuestion" ;
+                       RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BenefitQuestion
 RLWF:BenefitQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "Can be used to measure the expected experience in the event. \"what are your expectations from this talk?\" or \"What do you hope to gain from this webinar?\" type of questions."@en ;
-                     rdfs:label "BenefitQuestion" .
+                     rdfs:label "BenefitQuestion" ;
+                     RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BirthdateQuestion
 RLWF:BirthdateQuestion rdf:type owl:Class ;
                        rdfs:subClassOf RLWF:Question ;
                        rdfs:comment "Can be used to better build the demographic profile. This type is usually used to know the age of the respondent."@en ;
-                       rdfs:label "BirthdateQuestion" .
+                       rdfs:label "BirthdateQuestion" ;
+                       RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#BooleanQuestion
 RLWF:BooleanQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "Used for questions where two answer are possible, usually Yes or No."@en ;
-                     rdfs:label "BooleanQuestion" .
+                     rdfs:label "BooleanQuestion" ;
+                     RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CityQuestion
 RLWF:CityQuestion rdf:type owl:Class ;
                   rdfs:subClassOf RLWF:Question ;
                   rdfs:comment "Can be used to ask the current city of the respondent."@en ;
-                  rdfs:label "CityQuestion" .
+                  rdfs:label "CityQuestion" ;
+                  RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CommunicationChannelQuestion
@@ -1099,14 +1105,15 @@ RLWF:CommunicationChannelQuestion rdf:type owl:Class ;
                                   rdfs:subClassOf RLWF:Question ;
                                   rdfs:comment "This asks the source of acknolegment of the event by the respondent. For example \"How did you hear about this event?\""@en ;
                                   rdfs:label "CommunicationChannelQuestion" ;
-                                  RLWF:rlwf:containsWDT "1"^^xsd:int .
+                                  RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ContactNumberQuestion
 RLWF:ContactNumberQuestion rdf:type owl:Class ;
                            rdfs:subClassOf RLWF:Question ;
                            rdfs:comment "The respondent's telephone number. This type can also be used for demographic purposes."@en ;
-                           rdfs:label "ContactNumberQuestion" .
+                           rdfs:label "ContactNumberQuestion" ;
+                           RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion
@@ -1114,7 +1121,7 @@ RLWF:CountryQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
                      rdfs:label "CountryQuestion" ;
-                     RLWF:rlwf:containsWDT "1"^^xsd:int .
+                     RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CreateActivity
@@ -1128,35 +1135,40 @@ RLWF:CreateActivity rdf:type owl:Class ;
 RLWF:DateQuestion rdf:type owl:Class ;
                   rdfs:subClassOf RLWF:Question ;
                   rdfs:comment "Any question asking something that can be answered with a date. For example \"what dates are the suggested best?\" \"what time are you available?\"."@en ;
-                  rdfs:label "DateQuestion" .
+                  rdfs:label "DateQuestion" ;
+                  RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#DepartmentQuestion
 RLWF:DepartmentQuestion rdf:type owl:Class ;
                         rdfs:subClassOf RLWF:Question ;
                         rdfs:comment "A specific section within an organization (e.g Department of Computer Science in an university)."@en ;
-                        rdfs:label "DepartmentQuestion" .
+                        rdfs:label "DepartmentQuestion" ;
+                        RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EmailQuestion
 RLWF:EmailQuestion rdf:type owl:Class ;
                    rdfs:subClassOf RLWF:Question ;
                    rdfs:comment "A persons e-mail address. Can be used to enhance the communication with the participant or for marketing purposes."@en ;
-                   rdfs:label "EmailQuestion" .
+                   rdfs:label "EmailQuestion" ;
+                   RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#EventQuestion
 RLWF:EventQuestion rdf:type owl:Class ;
                    rdfs:subClassOf RLWF:Question ;
                    rdfs:comment "This type can be used to display the availability of one or more events."@en ;
-                   rdfs:label "EventQuestion" .
+                   rdfs:label "EventQuestion" ;
+                   RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#FileQuestion
 RLWF:FileQuestion rdf:type owl:Class ;
                   rdfs:subClassOf RLWF:Question ;
                   rdfs:comment "Can be used for file upload."@en ;
-                  rdfs:label "FileQuestion" .
+                  rdfs:label "FileQuestion" ;
+                  RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Form
@@ -1170,21 +1182,24 @@ RLWF:Form rdf:type owl:Class ;
 RLWF:GenderQuestion rdf:type owl:Class ;
                     rdfs:subClassOf RLWF:Question ;
                     rdfs:comment "Can be used to know the gender of the participant."@en ;
-                    rdfs:label "GenderQuestion" .
+                    rdfs:label "GenderQuestion" ;
+                    RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#HyperlinkQuestion
 RLWF:HyperlinkQuestion rdf:type owl:Class ;
                        rdfs:subClassOf RLWF:Question ;
                        rdfs:comment "Can be used for URLs such as social networks."@en ;
-                       rdfs:label "HyperlinkQuestion" .
+                       rdfs:label "HyperlinkQuestion" ;
+                       RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IdentifierQuestion
 RLWF:IdentifierQuestion rdf:type owl:Class ;
                         rdfs:subClassOf RLWF:Question ;
                         rdfs:comment "A person's unique identifier in the form's context(e.g University Log-in ID)."@en ;
-                        rdfs:label "IdentifierQuestion" .
+                        rdfs:label "IdentifierQuestion" ;
+                        RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#IndividualAnswer
@@ -1198,14 +1213,16 @@ RLWF:IndividualAnswer rdf:type owl:Class ;
 RLWF:LastNameQuestion rdf:type owl:Class ;
                       rdfs:subClassOf RLWF:NameQuestion ;
                       rdfs:comment "A person's last name."@en ;
-                      rdfs:label "LastNameQuestion" .
+                      rdfs:label "LastNameQuestion" ;
+                      RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#NameQuestion
 RLWF:NameQuestion rdf:type owl:Class ;
                   rdfs:subClassOf RLWF:Question ;
                   rdfs:comment "A person's first name."@en ;
-                  rdfs:label "NameQuestion" .
+                  rdfs:label "NameQuestion" ;
+                  RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#OrganizationQuestion
@@ -1213,7 +1230,7 @@ RLWF:OrganizationQuestion rdf:type owl:Class ;
                           rdfs:subClassOf RLWF:Question ;
                           rdfs:comment "The company name the user currently represents."@en ;
                           rdfs:label "OrganizationQuestion" ;
-                          RLWF:rlwf:containsWDT "1"^^xsd:int .
+                          RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ProfessionalInformationQuestion
@@ -1221,7 +1238,7 @@ RLWF:ProfessionalInformationQuestion rdf:type owl:Class ;
                                      rdfs:subClassOf RLWF:Question ;
                                      rdfs:comment "Can be used to state the area of expertise of the respondent (i.g Senior Data Analyst, Junior C# Developer)."@en ;
                                      rdfs:label "ProfessionalInformationQuestion" ;
-                                     RLWF:rlwf:containsWDT "1"^^xsd:int .
+                                     RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#Question
@@ -1230,7 +1247,8 @@ RLWF:Question rdf:type owl:Class ;
               rdfs:comment """a sentence worded or expressed so as to elicit information
 
 can be used for generalized Questions that doesn't fit in any of the other types of questions."""@en ;
-              rdfs:label "Question"^^xsd:string .
+              rdfs:label "Question" ;
+              RLWF:containsWDT "0"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#QuestionType
@@ -1257,7 +1275,7 @@ RLWF:StateORProvinceQuestion rdf:type owl:Class ;
                              rdfs:subClassOf RLWF:Question ;
                              rdfs:comment "State or Province of the respondent(e.g state of São Paulo, Brazil or Noord-Holland in Netherlands)."^^xsd:string ;
                              rdfs:label "StateOrProvinceQuestion" ;
-                             RLWF:rlwf:containsWDT "1"^^xsd:int .
+                             RLWF:containsWDT "1"^^xsd:int .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#UpdateActivity
@@ -1270,7 +1288,8 @@ RLWF:UpdateActivity rdf:type owl:Class ;
 RLWF:WhyAttendQuestion rdf:type owl:Class ;
                        rdfs:subClassOf RLWF:Question ;
                        rdfs:comment "Can be asked to understand why the respondent is participating on this event."@en ;
-                       rdfs:label "WhyAttendQuestion" .
+                       rdfs:label "WhyAttendQuestion" ;
+                       RLWF:containsWDT "0"^^xsd:int .
 
 
 #################################################################
@@ -1599,15 +1618,15 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-prov:specializationOf rdfs:seeAlso prov:alternateOf ;
-                      prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+prov:specializationOf prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                      rdfs:seeAlso prov:alternateOf ;
                       rdfs:label "specializationOf" ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                      prov:category "expanded" ;
                       prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
+                      prov:category "expanded" ;
                       prov:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
-                      prov:inverse "generalizationOf" ;
                       prov:component "alternate" ;
+                      prov:inverse "generalizationOf" ;
                       prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization"^^xsd:anyURI .
 
 

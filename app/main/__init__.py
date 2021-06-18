@@ -1,5 +1,5 @@
 from flask import Blueprint
+from .. import dataset
 
 main = Blueprint('main', __name__)
-
-from . import routes
+main.secret_key = "hello"
