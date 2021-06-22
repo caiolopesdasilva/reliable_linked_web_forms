@@ -1555,18 +1555,21 @@ RLWF:MultipleChoiceType rdf:type owl:NamedIndividual ,
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#P01
 RLWF:P01 rdf:type owl:NamedIndividual ,
                   prov:Person ;
+         RLWF:agent_email "scott.lang@av.com"^^xsd:string ;
          RLWF:agent_name "Scott Lang"^^xsd:string .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#P02
 RLWF:P02 rdf:type owl:NamedIndividual ,
                   prov:Person ;
+         RLWF:agent_email "c.huang@gmail.com"^^xsd:string ;
          RLWF:agent_name "Carter Huang"^^xsd:string .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#P03
 RLWF:P03 rdf:type owl:NamedIndividual ,
                   prov:Person ;
+         RLWF:agent_email "julius@email.com"^^xsd:string ;
          RLWF:agent_name "Julius Blaese"^^xsd:string .
 
 
@@ -1619,14 +1622,14 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #################################################################
 
 prov:specializationOf prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
-                      rdfs:seeAlso prov:alternateOf ;
                       rdfs:label "specializationOf" ;
+                      rdfs:seeAlso prov:alternateOf ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                      prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
                       prov:category "expanded" ;
+                      prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
                       prov:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
-                      prov:component "alternate" ;
                       prov:inverse "generalizationOf" ;
+                      prov:component "alternate" ;
                       prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization"^^xsd:anyURI .
 
 

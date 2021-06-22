@@ -2,6 +2,28 @@
 
 {% block content %}
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function() {
+    $('.country_select').select2();
+});
+
+    $(document).ready(function() {
+    $('.com_select').select2();
+});
+
+    $(document).ready(function() {
+    $('.uni_select').select2();
+});
+
+
+</script>
+
+
 <body>
 <section class="about-company-section">
     <div class="container p-1 p-sm-3">
@@ -49,7 +71,7 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="country_answer"><strong>Countries that are queried from Wikidata</strong></label>
-                    <select class="form-control" data-width="100%" id="country_answer" name="country_answer">
+                    <select class="country_select" data-width="100%" id="country_answer" name="country_answer">
                         {% for z in countries %}
                         <option>{{z}}</option>
                         {% endfor %}

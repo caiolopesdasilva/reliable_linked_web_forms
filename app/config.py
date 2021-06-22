@@ -1,11 +1,12 @@
 class Config(object):
-    TESTING=False
-    DEBUG=False
+    TESTING = False
+    DEBUG = False
+
 
 class Development(Config):
-    DEBUG=True
+    DEBUG = True
+
 
 class TESTING(Config):
-    TESTING=True
-    DEBUG=False
-
+    TESTING = True
+    DEBUG = False
