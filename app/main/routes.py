@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from .. import dataset
-from .. import forms
+from .. import dataset, forms
 
 main = Blueprint('main', __name__)
 main.secret_key = "hello"
@@ -8,7 +7,7 @@ main.secret_key = "hello"
 titles = dataset.list_all_forms()
 countries = dataset.wdt_select_countries()
 nl_universities = dataset.wdt_nl_universities()
-all_questions = dataset.list_all_questions()
+all_questions = dataset.list_all_questions() #this is used in the /question_explorer
 degrees = dataset.wdt_degrees()
 communication_channels = dataset.wdt_communication_channels()
 
@@ -41,6 +40,7 @@ def list_form(selected_title):
     questions = list_questions[1]
     q_types = list_questions[2]
     wdt = list_questions[3]
+    q_uids = list_questions[4]
     countries_list = countries[1]
     social_media_list = communication_channels[1]
     degrees_list = degrees[1]
@@ -55,7 +55,8 @@ def list_form(selected_title):
             else:
                 answers = request.form["answer" + (str(i))]
                 answers1.append(answers)
-        forms.answer_processor(answers1)
+        forms.answer_processor(answers1, selected_title, list_questions, q_uids,q_types, countries, nl_universities,
+                               degrees, communication_channels)
 
     return render_template('form.html', selected_form=selected_form, counters=counters, questions=questions,
                            q_types=q_types, countries=countries_list, degrees=degrees_list,

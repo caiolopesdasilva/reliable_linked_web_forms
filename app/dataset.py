@@ -100,7 +100,7 @@ def list_form_questions(selected_title):
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         
-        SELECT DISTINCT (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
+        SELECT DISTINCT (strafter(str(?entity), "#") AS ?entity) (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
         WHERE {
         
           ?x RLWF:hasQuestion ?entity.
@@ -122,31 +122,20 @@ def list_form_questions(selected_title):
     text_array = []
     qtypes_array = []
     wdt_array = []
+    uids_array = []
     for result in results["results"]["bindings"]:
         qcounter = result["qcounter"]["value"]
         text = result["text"]["value"]
         question_type = result["questiontype"]["value"]
+        q_uid = result["entity"]["value"]
         wdt = result["wdt"]["value"]
         qcounter_array.append(qcounter)
         text_array.append(text)
         qtypes_array.append(question_type)
         wdt_array.append(wdt)
+        uids_array.append(q_uid)
 
-    return qcounter_array, text_array, qtypes_array, wdt_array
-
-
-def respond_form(answers):
-    sparql.setQuery("""
-
-             """)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    for result in results["results"]["bindings"]:
-        title = (result["Title"]["value"])
-        counter = result["Counter"]["value"]
-
-    return
+    return qcounter_array, text_array, qtypes_array, wdt_array, uids_array
 
 
 def wdt_select_countries():
@@ -170,7 +159,7 @@ def wdt_select_countries():
         countries.append(country)
         uris.append(uri)
 
-    return uri, countries
+    return uris, countries
 
 
 def wdt_nl_universities():
@@ -334,8 +323,97 @@ def register_act_respond(uid):
     print(results.response.read())
     return
 
+def reg_individual_answer(answer, q_uids, x):
+    sparql.setMethod(POST)
+    individual_answer_uid = shortuuid.uuid()
+    sparql.setQuery("""
+        PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+    
+        INSERT DATA{
+        GRAPH <http://localhost:8890/RLWF>
+        {
+        RLWF:""" + individual_answer_uid + """ a owl:NamedIndividual ,
+                                RLWF:IndividualAnswer ;
+                        RLWF:hasAnswerTo RLWF:""" + q_uids + """ ;
+                        RLWF:answer_counter '""" + x + """'^^xsd:int ;
+            RLWF:individual_answer '""" + answer + """'^^xsd:string .
+        }
+        }
+        """)
+    results = sparql.query()
+    print(results.response.read())
+    return individual_answer_uid
 
-def create_answer_cluster(uid):
+
+def reg_wdt_individual_answer_1uri(answer, q_uids, x, wdt_uri):
+    sparql.setMethod(POST)
+    answer_uid = shortuuid.uuid()
+    sparql.setQuery("""
+        PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+
+        INSERT DATA{
+        GRAPH <http://localhost:8890/RLWF>
+        {
+        RLWF:""" + answer_uid + """ a owl:NamedIndividual ,
+                                RLWF:IndividualAnswer ;
+                        RLWF:hasAnswerTo RLWF:""" + q_uids + """ ;
+                        RLWF:answer_URI '""" + wdt_uri + """'^^xsd:anyURI ;
+                        RLWF:answer_counter '""" + x + """'^^xsd:int ;
+            RLWF:individual_answer '""" + answer + """'^^xsd:string .
+        }
+        }
+        """)
+    results = sparql.query()
+    print(results.response.read())
+    return answer_uid
+
+
+def reg_wdt_individual_answer_2uri(answer, q_uids, x, wdt_uri1, wdt_uri2):
+    sparql.setMethod(POST)
+    answer_uid = shortuuid.uuid()
+    sparql.setQuery("""
+        PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+
+        INSERT DATA{
+        GRAPH <http://localhost:8890/RLWF>
+        {
+        RLWF:""" + answer_uid + """ a owl:NamedIndividual ,
+                                RLWF:IndividualAnswer ;
+                        RLWF:hasAnswerTo RLWF:""" + q_uids + """ ;
+                            RLWF:answer_URI '""" + wdt_uri1 + """'^^xsd:anyURI ,
+                                             '""" + wdt_uri2 + """'^^xsd:anyURI ;
+                        RLWF:answer_counter '""" + x + """'^^xsd:int ;
+            RLWF:individual_answer '""" + answer + """'^^xsd:string .
+        }
+        }
+        """)
+    results = sparql.query()
+    print(results.response.read())
+    return answer_uid
+
+
+def get_cluster_counter(selected_title):
+    sparql.setQuery("""
+        PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+        select distinct (strafter(str(?person), "#") AS ?person)
+        WHERE {
+        ?person a owl:NamedIndividual.
+        ?person RLWF:agent_email ?email.
+        filter contains (?email,'""" + email + """')
+        }
+
+                         """)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    uid = ""
+
+    for result in results["results"]["bindings"]:
+        uid = result["person"]["value"]
+
+    return uid
+
+
+def create_answer_cluster(individual_answers_name,prov_activity_id, uid, form_counter):
     sparql.setMethod(POST)
     answer_cluster_id = shortuuid.uuid()
     sparql.setQuery("""
@@ -346,37 +424,35 @@ def create_answer_cluster(uid):
     {
     RLWF:""" + answer_cluster_id + """ rdf:type owl:NamedIndividual ,
                      RLWF:AnswerCluster ;
-            prov:wasAttributedTo RLWF:ID FROM AGENT HERE ;
-            prov:wasGeneratedBy RLWF:ID FROM ACTIVITY HERE ;
-            RLWF:hasIndividualAnswer RLWF:ID FROM UNIQUE ANSWER0 HERE ,
-                                     RLWF:ID FROM UNIQUE ANSWER1 HERE ,
-                                     RLWF:ID FROM UNIQUE ANSWER2 HERE ,
-                                     RLWF:ID FROM UNIQUE ANSWER3 HERE ,
-                                     RLWF:ID FROM UNIQUE ANSWER4 HERE ,
-                                     RLWF:ID FROM UNIQUE ANSWER5 HERE ;
-            RLWF:answerCluster_counter "COUNTER HERE"^^xsd:int .
+            prov:wasAttributedTo RLWF:""" + uid + """;
+            prov:wasGeneratedBy RLWF:""" + prov_activity_id + """;
+            RLWF:hasIndividualAnswer RLWF:'""" + individual_answers_name[0] + """',
+                                     RLWF:'""" + individual_answers_name[1] + """',
+                                     RLWF:'""" + individual_answers_name[2] + """',
+                                     RLWF:'""" + individual_answers_name[3] + """',
+                                     RLWF:'""" + individual_answers_name[4] + """',
+                                     RLWF:'""" + individual_answers_name[5] + """';
+            RLWF:answerCluster_counter '""" + form_counter + """'^^xsd:int .
     }
     }
     """)
     results = sparql.query()
     print(results.response.read())
-    return
+    return answer_cluster_id
 
 
-def reg_individual_answer():
+
+
+def update_form(answer_cluster):
     sparql.setMethod(POST)
-    individual_answer_uid = shortuuid.uuid()
+    answer_cluster_id = shortuuid.uuid()
     sparql.setQuery("""
     PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
 
     INSERT DATA{
     GRAPH <http://localhost:8890/RLWF>
     {
-    RLWF:""" + individual_answer_uid + """ a owl:NamedIndividual ,
-                            RLWF:IndividualAnswer ;
-                    RLWF:hasAnswerTo RLWF:QUESTION_ID HERE, THIS IS GONNA BE COMPLICATED ;
-                    RLWF:answer_counter "COUNTER FROM QUESTION HERE"^^xsd:int ;
-        RLWF:individual_answer "THE VALUE OF THE ANSWER HERE^^xsd:string .
+
     }
     }
     """)

@@ -645,6 +645,12 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
 RLWF:PROV-O rdf:type owl:ObjectProperty .
 
 
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#containsAnswersFrom
+RLWF:containsAnswersFrom rdf:type owl:ObjectProperty ;
+                         rdfs:domain RLWF:AnswerCluster ;
+                         rdfs:range RLWF:Form .
+
+
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasAnswerTo
 RLWF:hasAnswerTo rdf:type owl:ObjectProperty ;
                  rdfs:domain RLWF:IndividualAnswer ;
@@ -667,12 +673,6 @@ RLWF:hasQuestion rdf:type owl:ObjectProperty ;
 RLWF:hasQuestionType rdf:type owl:ObjectProperty ;
                      rdfs:domain RLWF:Question ;
                      rdfs:range RLWF:QuestionType .
-
-
-###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#hasResponse
-RLWF:hasResponse rdf:type owl:ObjectProperty ;
-                 rdfs:domain RLWF:Form ;
-                 rdfs:range RLWF:AnswerCluster .
 
 
 #################################################################
@@ -1340,8 +1340,6 @@ RLWF:F01 rdf:type owl:NamedIndividual ,
                           RLWF:F01Q04 ,
                           RLWF:F01Q05 ,
                           RLWF:F01Q06 ;
-         RLWF:hasResponse RLWF:F01A01 ,
-                          RLWF:F01A02 ;
          RLWF:form_counter "1"^^xsd:int ;
          RLWF:form_description "Webinar will be hosted via Zoom with Scott Lang being the host. Max of 10 persons, so fill the form fast!"^^xsd:string ;
          RLWF:form_enddate "2021-06-30T10:24:00"^^xsd:dateTime ;
@@ -1355,6 +1353,7 @@ RLWF:F01A01 rdf:type owl:NamedIndividual ,
                      RLWF:AnswerCluster ;
             prov:wasAttributedTo RLWF:P02 ;
             prov:wasGeneratedBy RLWF:respond01_form01 ;
+            RLWF:containsAnswersFrom RLWF:F01 ;
             RLWF:hasIndividualAnswer RLWF:F01A01Q01 ,
                                      RLWF:F01A01Q02 ,
                                      RLWF:F01A01Q03 ,
@@ -1422,6 +1421,7 @@ RLWF:F01A02 rdf:type owl:NamedIndividual ,
                      RLWF:AnswerCluster ;
             prov:wasAttributedTo RLWF:P03 ;
             prov:wasGeneratedBy RLWF:respond02_form01 ;
+            RLWF:containsAnswersFrom RLWF:F01 ;
             RLWF:hasIndividualAnswer RLWF:F01A02Q01 ,
                                      RLWF:F01A02Q02 ,
                                      RLWF:F01A02Q03 ,
@@ -1621,15 +1621,15 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-prov:specializationOf prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
-                      rdfs:label "specializationOf" ;
+prov:specializationOf rdfs:label "specializationOf" ;
+                      prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
                       rdfs:seeAlso prov:alternateOf ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                       prov:category "expanded" ;
                       prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
                       prov:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
-                      prov:inverse "generalizationOf" ;
                       prov:component "alternate" ;
+                      prov:inverse "generalizationOf" ;
                       prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization"^^xsd:anyURI .
 
 
