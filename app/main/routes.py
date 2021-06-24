@@ -2,12 +2,11 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from .. import dataset, forms
 
 main = Blueprint('main', __name__)
-main.secret_key = "hello"
 
 titles = dataset.list_all_forms()
 countries = dataset.wdt_select_countries()
 nl_universities = dataset.wdt_nl_universities()
-all_questions = dataset.list_all_questions() #this is used in the /question_explorer
+all_questions = dataset.list_all_questions()  # this is used in the /question_explorer
 degrees = dataset.wdt_degrees()
 communication_channels = dataset.wdt_communication_channels()
 
@@ -39,8 +38,10 @@ def list_form(selected_title):
     counters = list_questions[0]
     questions = list_questions[1]
     q_types = list_questions[2]
-    wdt = list_questions[3]
+    wdt = list_questions[3]  # wdt enabled should appear in the metadada from the question
     q_uids = list_questions[4]
+    form_instance = list_questions[5]  # this will only contain 1 value
+
     countries_list = countries[1]
     social_media_list = communication_channels[1]
     degrees_list = degrees[1]
@@ -55,7 +56,7 @@ def list_form(selected_title):
             else:
                 answers = request.form["answer" + (str(i))]
                 answers1.append(answers)
-        forms.answer_processor(answers1, selected_title, list_questions, q_uids,q_types, countries, nl_universities,
+        forms.answer_processor(answers1, selected_title, form_instance, q_uids, q_types, countries, nl_universities,
                                degrees, communication_channels)
 
     return render_template('form.html', selected_form=selected_form, counters=counters, questions=questions,
@@ -74,26 +75,30 @@ def question_explorer():
     list_of_questions = all_questions[0]
     wdt = all_questions[1]
     question_comments = all_questions[2]
-    comments = []
-    wikidata_queryable = []
+
     if request.method == "POST":
         question_select = request.form["question_select"]
-        for x in range(len(all_questions)):
-            comments = question_comments[x]
-            wikidata_queryable = wdt[x]
-            print(comments)
+        question_index = list_of_questions.index(question_select)
+        comment = question_comments[question_index]
+        wikidata_queryable = wdt[question_index]
 
         # isIndex is the variable we will use to determine
         # whether or not to render the metadata from the questions,
         # I think this is very rough but as in cases before, it works.
         return render_template("question_explorer.html", list_of_questions=list_of_questions,
-                               comments=comments, wikidata_queriable=wikidata_queryable, countries=countries,
-                               question_select=question_select, isIndex=True)
+                               comment=comment, wikidata_queryable=wikidata_queryable, countries=countries[1],
+                               question_select=question_select, degrees=degrees[1], nl_universities=nl_universities[1],
+                               communication_channels=communication_channels[1], isIndex=True)
 
     else:
-        return render_template('question_explorer.html', list_of_questions=list_of_questions)
+        return render_template('question_explorer.html', list_of_questions=list_of_questions, isIndex=False)
 
 
 @main.route('/signup', methods=['GET', 'POST'])
 def signup():
     return render_template('signup.html')
+
+
+@main.route('/question_creator', methods=['GET', 'POST'])
+def question_creator():
+    return render_template('question_creator.html')

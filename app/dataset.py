@@ -100,7 +100,7 @@ def list_form_questions(selected_title):
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         
-        SELECT DISTINCT (strafter(str(?entity), "#") AS ?entity) (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
+        SELECT DISTINCT (strafter(str(?x), "#") AS ?form_instance) (strafter(str(?entity), "#") AS ?entity) (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
         WHERE {
         
           ?x RLWF:hasQuestion ?entity.
@@ -123,19 +123,21 @@ def list_form_questions(selected_title):
     qtypes_array = []
     wdt_array = []
     uids_array = []
+    form_instance = ""
     for result in results["results"]["bindings"]:
         qcounter = result["qcounter"]["value"]
         text = result["text"]["value"]
         question_type = result["questiontype"]["value"]
         q_uid = result["entity"]["value"]
         wdt = result["wdt"]["value"]
+        form_instance = result["form_instance"]["value"]
         qcounter_array.append(qcounter)
         text_array.append(text)
         qtypes_array.append(question_type)
         wdt_array.append(wdt)
         uids_array.append(q_uid)
 
-    return qcounter_array, text_array, qtypes_array, wdt_array, uids_array
+    return qcounter_array, text_array, qtypes_array, wdt_array, uids_array, form_instance
 
 
 def wdt_select_countries():
@@ -321,7 +323,8 @@ def register_act_respond(uid):
     """)
     results = sparql.query()
     print(results.response.read())
-    return
+    return act_uid
+
 
 def reg_individual_answer(answer, q_uids, x):
     sparql.setMethod(POST)
@@ -395,67 +398,67 @@ def reg_wdt_individual_answer_2uri(answer, q_uids, x, wdt_uri1, wdt_uri2):
 def get_cluster_counter(selected_title):
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-        select distinct (strafter(str(?person), "#") AS ?person)
-        WHERE {
-        ?person a owl:NamedIndividual.
-        ?person RLWF:agent_email ?email.
-        filter contains (?email,'""" + email + """')
+        
+        SELECT (str(?cluster_counter) as ?cluster_counter)  WHERE  {
+          ?y a RLWF:AnswerCluster.
+          ?y RLWF:answerCluster_counter ?cluster_counter.
+          ?y RLWF:containsAnswersFrom ?z. 
+          ?z RLWF:form_title ?w.
+         filter contains(?w,'""" + selected_title + """').
         }
-
+        order by desc(?cluster_counter)
+        limit 1
                          """)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    uid = ""
+    cluster_counter = 0
 
     for result in results["results"]["bindings"]:
-        uid = result["person"]["value"]
+        cluster_counter = result["cluster_counter"]["value"]
 
-    return uid
+    return cluster_counter
 
 
-def create_answer_cluster(individual_answers_name,prov_activity_id, uid, form_counter):
+def create_answer_cluster(individual_answers_name, prov_activity_id, uid, cluster_counter, form_instance):
     sparql.setMethod(POST)
     answer_cluster_id = shortuuid.uuid()
     sparql.setQuery("""
-    PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-
-    INSERT DATA{
-    GRAPH <http://localhost:8890/RLWF>
-    {
-    RLWF:""" + answer_cluster_id + """ rdf:type owl:NamedIndividual ,
-                     RLWF:AnswerCluster ;
-            prov:wasAttributedTo RLWF:""" + uid + """;
-            prov:wasGeneratedBy RLWF:""" + prov_activity_id + """;
-            RLWF:hasIndividualAnswer RLWF:'""" + individual_answers_name[0] + """',
-                                     RLWF:'""" + individual_answers_name[1] + """',
-                                     RLWF:'""" + individual_answers_name[2] + """',
-                                     RLWF:'""" + individual_answers_name[3] + """',
-                                     RLWF:'""" + individual_answers_name[4] + """',
-                                     RLWF:'""" + individual_answers_name[5] + """';
-            RLWF:answerCluster_counter '""" + form_counter + """'^^xsd:int .
-    }
-    }
+        PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+        #the problem probably lies in the individual answers array "can only concatenate str (not "int") to str"
+        INSERT DATA{
+        GRAPH <http://localhost:8890/RLWF>
+        {
+        RLWF:""" + answer_cluster_id + """ rdf:type owl:NamedIndividual ,
+                         RLWF:AnswerCluster ;
+                prov:wasAttributedTo RLWF:""" + uid + """;
+                prov:wasGeneratedBy RLWF:""" + prov_activity_id + """;
+                RLWF:containsAnswersFrom RLWF:""" + form_instance + """ ;
+                RLWF:hasIndividualAnswer RLWF:""" + individual_answers_name[0] + """,
+                                         RLWF:""" + individual_answers_name[1] + """,
+                                         RLWF:""" + individual_answers_name[2] + """,
+                                         RLWF:""" + individual_answers_name[3] + """,
+                                         RLWF:""" + individual_answers_name[4] + """,
+                                         RLWF:""" + individual_answers_name[5] + """;
+                RLWF:answerCluster_counter '""" + (str(cluster_counter)) + """'^^xsd:int .
+        }
+        }
     """)
     results = sparql.query()
     print(results.response.read())
     return answer_cluster_id
 
 
-
-
-def update_form(answer_cluster):
+def create_custom_question():
     sparql.setMethod(POST)
-    answer_cluster_id = shortuuid.uuid()
+
     sparql.setQuery("""
-    PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-
-    INSERT DATA{
-    GRAPH <http://localhost:8890/RLWF>
-    {
-
-    }
-    }
+   RLWF:CountryQuestion rdf:type owl:Class ;
+                     rdfs:subClassOf RLWF:Question ;
+                     rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
+                     rdfs:label "CountryQuestion" ;
+                     RLWF:containsWDT "1"^^xsd:int ;
+                     RLWF:wikidataPredicate "Q6256" .
     """)
     results = sparql.query()
     print(results.response.read())
-    return
+    return answer_cluster_id

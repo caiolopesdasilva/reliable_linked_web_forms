@@ -1,7 +1,7 @@
 from app import dataset
 
 
-def answer_processor(answers1, selected_title, list_questions, q_uids, q_types, countries, nl_universities, degrees,
+def answer_processor(answers1, selected_title, form_instance, q_uids, q_types, countries, nl_universities, degrees,
                      communication_channels):
     countries_list = countries[1]
     countries_uris = countries[0]
@@ -26,15 +26,15 @@ def answer_processor(answers1, selected_title, list_questions, q_uids, q_types, 
 
     exists = dataset.check_agent(email)
     if exists:  # if the user is newly created the shortuuid is stored and returned from the function insert_new_agent
-        # however if the user already exists we need to check the triple store for its uid to create instances
+        # however if the user already exists we need to check the triple store for its agent_uid to create instances
         # of Activity, AnswerCluster, IndividualAnswer and so on.
-        print("this user exists we will get his uid")
-        uid = dataset.get_agent_uid(email)
+        print("this user exists we will get his agent_uid")
+        agent_uid = dataset.get_agent_uid(email)
     else:
         print("This is a new user, we are calling the insert_new_agent")
-        uid = dataset.insert_new_agent(name, email)
+        agent_uid = dataset.insert_new_agent(name, email)
 
-    prov_activity_id = dataset.register_act_respond(uid)
+    prov_activity_id = dataset.register_act_respond(agent_uid)
 
     # after creating the activity, its best to generate each individual answer, one by one,
     # but we need to have some information from the form instance
@@ -74,5 +74,10 @@ def answer_processor(answers1, selected_title, list_questions, q_uids, q_types, 
             individual_answers_name.append(answer_uid)
 
     # before creating the answer cluster its good to get the cluster_counter value.
-    answer_cluster = dataset.create_answer_cluster(individual_answers_name, prov_activity_id, uid, form_counter)
-    update_form = dataset.update_form(answer_cluster)
+
+    cluster_counter = dataset.get_cluster_counter(selected_title)
+    cluster_counter = (int(cluster_counter)) + 1  # this convertion feels a bit rough for me, but it works.
+    answer_cluster_uid = dataset.create_answer_cluster(individual_answers_name, prov_activity_id, agent_uid,
+                                                       cluster_counter, form_instance)
+    print("This Answer cluster was created")
+    print(answer_cluster_uid)

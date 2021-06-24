@@ -1,0 +1,70 @@
+{%extends 'layout.html'%}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function() {
+    $('.country_select').select2();
+});
+
+    $(document).ready(function() {
+    $('.com_select').select2();
+});
+
+    $(document).ready(function() {
+    $('.uni_select').select2();
+});
+
+    $(document).ready(function() {
+    $('.degree_select').select2();
+});
+
+
+
+</script>
+
+<body>
+<section class="about-company-section">
+    <div class="container p-1 p-sm-3">
+        <div class="col12">
+            <h2>Question Explorer</h2>
+            <hr/>
+        </div>
+        <div class="row">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="question_select">Select a form below</label>
+                    <select class="form-control" data-width="100%" id="question_select" name="question_select"
+                            value="{{question_select}}">
+                        {% for x in list_of_questions %}
+                        <option>{{x}}</option>
+                        {% endfor %}
+
+                        <!--                        {% if  question_select != "" %}-->
+                        <!--                        <option selected="selected">{{question_select}}</option> &lt;!&ndash; maybe a bit rough but it works &ndash;&gt;-->
+                        <!--                        {% endif %}-->
+                    </select>
+                    </br>
+                    <button type="submit" class="btn btn-primary t-5">Submit</button>
+                </div>
+            </form>
+        </div>
+        <hr class="my-4">
+
+
+        </form>
+    </div>
+    </div>
+
+
+</section>
+
+
+</body>
+
+{% endblock %}

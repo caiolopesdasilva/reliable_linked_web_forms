@@ -20,9 +20,13 @@
     $('.uni_select').select2();
 });
 
+    $(document).ready(function() {
+    $('.degree_select').select2();
+});
+
+
 
 </script>
-
 
 <body>
 <section class="about-company-section">
@@ -51,47 +55,99 @@
             </form>
         </div>
         <hr class="my-4">
-
         {% if isIndex %}
-        <form>
 
-            <div class="form-group">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="q_comment">Question Comments</label>
-                            <input type="text" readonly class="form-control" id="q_comment"
-                                   placeholder="{{comments}}">
+        <div class="form-group">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="question"><strong>Question Name</strong></label>
+                        <input type="text" readonly class="form-control" id="question"
+                               placeholder="{{question_select}}">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="wdt_queryable"><strong>Wikidata Queryable</strong></label>
+                        <input type="text" readonly class="form-control" id="wdt_queryable"
+                               placeholder="{{wikidata_queryable}}">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1"><strong>Question Comments</strong></label>
+                            <textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                      placeholder="{{comment}}"></textarea>
                         </div>
                     </div>
-                </form>
-            </div>
-
-            {% if question_select == "CountryQuestion" %}
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="country_answer"><strong>Countries that are queried from Wikidata</strong></label>
-                    <select class="country_select" data-width="100%" id="country_answer" name="country_answer">
-                        {% for z in countries %}
-                        <option>{{z}}</option>
-                        {% endfor %}
-                    </select>
                 </div>
+
+            </form>
+        </div>
+
+        {% if question_select == "CountryQuestion" %}
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="country_answer"><strong>Countries that are queried from
+                    Wikidata</strong></label>
+                <select class="country_select" data-width="100%" id="country_answer"
+                        name="country_answer">
+                    {% for z in countries %}
+                    <option>{{z}}</option>
+                    {% endfor %}
+                </select>
             </div>
+        </div>
 
-            {% else %}
+        {% elif question_select == "AcademicInformationQuestion" %}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="degree_select"><strong>(Degree)</strong></label>
+                <select class="degree_select" data-width="100%" id="degree_select" name="degree">
+                    {% for x in degrees %}
+                    <option>{{x}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="university_select"><strong>(Dutch Universities)</strong></label>
 
-            <label for="available_answers"><strong>Available Answers</strong></label>
-            <input type="text" class="form-control" id="available_answers" name="available_answers" placeholder="">
+                <select class="uni_select" data-width="100%" id="university_select"
+                        name="answer{{i}}">
+                    {% for z in nl_universities %}
+                    <option>{{z}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        {% elif question_select == "CommunicationChannelQuestion" %}
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="communication_channel_select"><strong>Available social networks</strong></label>
+                <select class="com_select" data-width="100%" id="communication_channel_select"
+                        name="answer{{i}}">
+                    {% for x in communication_channels %}
+                    <option>{{x}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        {% else %}
+
+        <label for="available_answers"><strong>Available Field</strong></label>
+        <input type="text" class="form-control" id="available_answers" name="available_answers"
+               placeholder="">
 
 
-            {% endif %}
-            {% endif %}
+        {% endif %}
+        {% endif %}
 
         </form>
     </div>
     </div>
-
 
 
 </section>

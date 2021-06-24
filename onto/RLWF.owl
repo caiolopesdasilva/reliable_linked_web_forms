@@ -12,8 +12,8 @@
 @base <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl> .
 
 <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl> rdf:type owl:Ontology ;
-                                                                                                   rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ;
-                                                                                                   owl:deprecated "https://github.com/caiolopesdasilva/reliable_linked_web_forms" .
+                                                                                                   rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
+                                                                                                                "https://github.com/caiolopesdasilva/reliable_linked_web_forms" .
 
 #################################################################
 #    Annotation properties
@@ -177,6 +177,22 @@ prov:wasRevisionOf rdf:type owl:AnnotationProperty ;
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#containsWDT
 RLWF:containsWDT rdf:type owl:AnnotationProperty .
+
+
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#wikidataFilterNotExists
+RLWF:wikidataFilterNotExists rdf:type owl:AnnotationProperty .
+
+
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#wikidataLabelFilter
+RLWF:wikidataLabelFilter rdf:type owl:AnnotationProperty .
+
+
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#wikidataObject
+RLWF:wikidataObject rdf:type owl:AnnotationProperty .
+
+
+###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#wikidataPredicate
+RLWF:wikidataPredicate rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1042,7 +1058,8 @@ RLWF:AcademicInformationQuestion rdf:type owl:Class ;
                                  rdfs:subClassOf RLWF:Question ;
                                  rdfs:comment "Can be used to state type of degree (e.g bachelor, master) with varying levels of information accepted (e.g MSc Information Sciences at the university of XXX, Bsc Computer Science)"@en ;
                                  rdfs:label "AcademicInformationQuestion" ;
-                                 RLWF:containsWDT "1"^^xsd:int .
+                                 RLWF:containsWDT "1"^^xsd:int ;
+                                 RLWF:wikidataObject "Q38723" .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#AddressQuestion
@@ -1105,7 +1122,9 @@ RLWF:CommunicationChannelQuestion rdf:type owl:Class ;
                                   rdfs:subClassOf RLWF:Question ;
                                   rdfs:comment "This asks the source of acknolegment of the event by the respondent. For example \"How did you hear about this event?\""@en ;
                                   rdfs:label "CommunicationChannelQuestion" ;
-                                  RLWF:containsWDT "1"^^xsd:int .
+                                  RLWF:containsWDT "1"^^xsd:int ;
+                                  RLWF:wikidataFilterNotExists "wdt:P576" ;
+                                  RLWF:wikidataObject "Q3220391" .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#ContactNumberQuestion
@@ -1121,7 +1140,8 @@ RLWF:CountryQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
                      rdfs:label "CountryQuestion" ;
-                     RLWF:containsWDT "1"^^xsd:int .
+                     RLWF:containsWDT "1"^^xsd:int ;
+                     RLWF:wikidataPredicate "Q6256" .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CreateActivity
@@ -1621,15 +1641,15 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-prov:specializationOf rdfs:label "specializationOf" ;
-                      prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+prov:specializationOf prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
                       rdfs:seeAlso prov:alternateOf ;
+                      rdfs:label "specializationOf" ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                      prov:category "expanded" ;
                       prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
+                      prov:category "expanded" ;
                       prov:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
-                      prov:component "alternate" ;
                       prov:inverse "generalizationOf" ;
+                      prov:component "alternate" ;
                       prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization"^^xsd:anyURI .
 
 
