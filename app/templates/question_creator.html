@@ -2,63 +2,50 @@
 
 {% block content %}
 
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-
 <script>
-
-    $(document).ready(function() {
-    $('.country_select').select2();
-});
-
-    $(document).ready(function() {
-    $('.com_select').select2();
-});
-
-    $(document).ready(function() {
-    $('.uni_select').select2();
-});
-
-    $(document).ready(function() {
-    $('.degree_select').select2();
-});
-
-
-
 </script>
 
 <body>
 <section class="about-company-section">
     <div class="container p-1 p-sm-3">
         <div class="col12">
-            <h2>Question Explorer</h2>
+            <h2>Question Creator</h2>
             <hr/>
+            <p>In order to create a new instance of a question type, you need to do the Following steps</p>
+            <p>1 - Name the question type, The advice is to use the name + Question(e.g "FoodQuestion")</p>
+            <p>2 - Find the wikidata entity identifier, (e.g Q38723 - <a href="https://www.wikidata.org/wiki/Q38723">higher
+                education institution</a>)</p>
+            <p>3 - This initial implementation goal is to list all instances and sub-classes of the selected entity, but
+                it can't predict weather the results are good or not. you can also add filters in the field</p>
+            <p>4 - Some SPARQL knowledge is advisable, after inserting the name and the entity identifier, you can query
+                the RLWF triple-store to see if it was correctly created. Otherwise contact the system administraction
+                for the deletion of the wrong value</p>
         </div>
-        <div class="row">
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="question_select">Select a form below</label>
-                    <select class="form-control" data-width="100%" id="question_select" name="question_select"
-                            value="{{question_select}}">
-                        {% for x in list_of_questions %}
-                        <option>{{x}}</option>
-                        {% endfor %}
-
-                        <!--                        {% if  question_select != "" %}-->
-                        <!--                        <option selected="selected">{{question_select}}</option> &lt;!&ndash; maybe a bit rough but it works &ndash;&gt;-->
-                        <!--                        {% endif %}-->
-                    </select>
-                    </br>
-                    <button type="submit" class="btn btn-primary t-5">Submit</button>
+        <form action="" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="input_q_type">Question Name</label>
+                    <input type="text" class="form-control" id="input_q_type">
                 </div>
-            </form>
-        </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Entity ID</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Filter</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Filter Not Contains</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
         <hr class="my-4">
 
 
-        </form>
-    </div>
     </div>
 
 

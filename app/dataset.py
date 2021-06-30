@@ -18,7 +18,7 @@ def list_all_forms():
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         
-        SELECT (str(?title) as ?Title) FROM <http://localhost:8890/RLWF> WHERE  {
+        SELECT (str(?title) as ?Title) FROM WHERE  {
           ?x RLWF:form_title ?title.
           ?x RLWF:form_counter ?counter.
         }
@@ -97,6 +97,7 @@ def select_form(selected_title):
 
 def list_form_questions(selected_title):
     sparql.setQuery("""
+    
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         
@@ -104,17 +105,15 @@ def list_form_questions(selected_title):
         WHERE {
         
           ?x RLWF:hasQuestion ?entity.
-          ?x RLWF:form_title ?form_title.
+          ?x RLWF:form_title '""" + selected_title + """'^^xsd:string.
           ?entity a ?type.
           ?type rdfs:label ?q.
           ?type rdfs:subClassOf* RLWF:Question.
           ?entity RLWF:text ?text.
           ?entity RLWF:question_counter ?counter.
           OPTIONAL{?type RLWF:containsWDT ?wdt}.
-        
-        filter contains(str(?form_title),'""" + selected_title + """').
         }
-        ORDER BY asc(?entity) 
+        ORDER BY asc(?entity)
                  """)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
@@ -194,14 +193,13 @@ def wdt_nl_universities():
 
 def wdt_communication_channels():
     sparql_wdt.setQuery("""
-        SELECT ?social_media_uri ?label_en
+        SELECT DISTINCT ?social_media_uri ?label_en
         WHERE
         {
           ?social_media_uri wdt:P31 wd:Q3220391.
           ?social_media_uri rdfs:label ?label_en filter (lang(?label_en) = "en").
           filter not exists {?social_media_uri wdt:P576 ?x} #This line avoids defunct social network services
-        }
-    
+        }    
         order by ?label_en
     """)
     sparql_wdt.setReturnFormat(JSON)
@@ -220,7 +218,7 @@ def wdt_communication_channels():
 
 def wdt_degrees():
     sparql_wdt.setQuery("""
-        SELECT  ?degree_uri ?label_en
+        SELECT DISTINCT ?degree_uri ?label_en
         WHERE
         {
           ?degree_uri wdt:P31/wdt:P279* wd:Q189533.
@@ -228,8 +226,7 @@ def wdt_degrees():
           FILTER (contains(?label_en, "Bachelor")||
           contains(?label_en, "Master")||
           contains(?label_en,"PhD")).
-        }
-    
+        }    
         order by ?label_en
     """)
     sparql_wdt.setReturnFormat(JSON)
@@ -448,11 +445,11 @@ def create_answer_cluster(individual_answers_name, prov_activity_id, uid, cluste
     return answer_cluster_id
 
 
-def create_custom_question():
+def register_custom_question():
     sparql.setMethod(POST)
 
     sparql.setQuery("""
-   RLWF:CountryQuestion rdf:type owl:Class ;
+                    RLWF:CountryQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
                      rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
                      rdfs:label "CountryQuestion" ;
@@ -461,4 +458,4 @@ def create_custom_question():
     """)
     results = sparql.query()
     print(results.response.read())
-    return answer_cluster_id
+    return x
