@@ -837,7 +837,7 @@ RLWF:agent_gender rdf:type owl:DatatypeProperty ;
 RLWF:agent_identifier rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf RLWF:agent ;
                       rdfs:domain prov:Agent ;
-                      rdfs:range xsd:anyURI ;
+                      rdfs:range xsd:string ;
                       rdfs:label "agent_identifier"@en .
 
 
@@ -1138,10 +1138,11 @@ RLWF:ContactNumberQuestion rdf:type owl:Class ;
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CountryQuestion
 RLWF:CountryQuestion rdf:type owl:Class ;
                      rdfs:subClassOf RLWF:Question ;
-                     rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
+                     rdfs:comments "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
                      rdfs:label "CountryQuestion" ;
                      RLWF:containsWDT "1"^^xsd:int ;
-                     RLWF:wikidataPredicate "Q6256" .
+                     RLWF:wikidataObject "Q6256" ;
+                     RLWF:wikidataPredicate "P31" .
 
 
 ###  https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#CreateActivity
@@ -1403,8 +1404,7 @@ RLWF:F01A01Q02 rdf:type owl:NamedIndividual ,
 RLWF:F01A01Q03 rdf:type owl:NamedIndividual ,
                         RLWF:IndividualAnswer ;
                RLWF:hasAnswerTo RLWF:F01Q03 ;
-               RLWF:answer_URI "https://www.wikidata.org/wiki/Q21198"^^xsd:anyURI ,
-                               "https://www.wikidata.org/wiki/Q21198"^^xsd:anyURI ;
+               RLWF:answer_URI "https://www.wikidata.org/wiki/Q21198"^^xsd:anyURI ;
                RLWF:answer_counter "3"^^xsd:int ;
                RLWF:individual_answer "Bachelor's Degree in Computer Science"^^xsd:string .
 
@@ -1641,12 +1641,12 @@ RLWF:respond02_form01 rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-prov:specializationOf rdfs:label "specializationOf" ;
-                      prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+prov:specializationOf prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                      rdfs:label "specializationOf" ;
                       rdfs:seeAlso prov:alternateOf ;
                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                      prov:category "expanded" ;
                       prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
+                      prov:category "expanded" ;
                       prov:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
                       prov:inverse "generalizationOf" ;
                       prov:component "alternate" ;

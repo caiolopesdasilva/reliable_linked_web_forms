@@ -17,8 +17,7 @@ sparql_wdt = SPARQLWrapper("https://query.wikidata.org/sparql",
 def list_all_forms():
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-        
-        SELECT (str(?title) as ?Title) FROM WHERE  {
+        SELECT (str(?title) as ?Title) WHERE  {
           ?x RLWF:form_title ?title.
           ?x RLWF:form_counter ?counter.
         }
@@ -445,17 +444,90 @@ def create_answer_cluster(individual_answers_name, prov_activity_id, uid, cluste
     return answer_cluster_id
 
 
-def register_custom_question():
+def register_custom_question(question_name, entity_id, query_filter, comments):
     sparql.setMethod(POST)
-
     sparql.setQuery("""
-                    RLWF:CountryQuestion rdf:type owl:Class ;
-                     rdfs:subClassOf RLWF:Question ;
-                     rdfs:comment "This instance can be used to state the country a person currently resides in or the country of origin."@en ;
-                     rdfs:label "CountryQuestion" ;
-                     RLWF:containsWDT "1"^^xsd:int ;
-                     RLWF:wikidataPredicate "Q6256" .
+    PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+    INSERT DATA{
+    GRAPH <http://localhost:8890/RLWF>
+    {
+    RLWF:""" + question_name + """ rdf:type owl:Class;
+                    rdfs:subClassOf RLWF:Question;
+                    rdfs:label '""" + question_name + """'@en;
+                    rdfs:comment '""" + comments + """';
+                    RLWF:containsWDT "1"^^xsd:int;
+                    RLWF:wikidataObject '""" + entity_id + """';
+                    RLWF:wikidataPredicate "P31";
+                    RLWF:wikidataLabelFilter '""" + query_filter + """'.
+    }
+    }
     """)
     results = sparql.query()
     print(results.response.read())
-    return x
+
+
+def wdt_custom_question(entity_id, query_filter):
+    sparql_wdt.setQuery("""
+    SELECT ?entities ?label_en
+    WHERE
+    {
+      ?entities wdt:P31 wd:""" + entity_id + """.
+      ?entities rdfs:label ?label_en filter (lang(?label_en) = "en").
+      FILTER(contains(?label_en,'""" + query_filter + """'))
+    }
+    order by ?label_en
+                         """)
+    sparql_wdt.setReturnFormat(JSON)
+    results = sparql_wdt.query().convert()
+    custom_question_uris = []
+    custom_question_names = []
+
+    for result in results["results"]["bindings"]:
+        csquestion_name = (result["label_en"]["value"])
+        csquestion_uri = (result["entities"]["value"])
+        custom_question_names.append(csquestion_name)
+        custom_question_uris.append(csquestion_uri)
+
+
+    return custom_question_uris, custom_question_names
+
+
+def custom_question_analyser(entity_id):
+    sparql_wdt.setMethod(POST)
+
+    sparql.setQuery("""
+    PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+    ask 
+    WHERE {
+    ?x RLWF:wikidataObject ?y.
+    filter contains(?y,'""" + entity_id + """')
+    }
+                     """)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    return results['boolean']
+
+
+def get_question_information(question_name):
+    sparql.setQuery("""
+PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
+
+select distinct (strafter(str(?qname), "#") AS ?qname) ?q_id ?qfilter
+WHERE {
+?qname rdfs:subClassOf RLWF:Question.
+?qname RLWF:wikidataObject ?q_id.
+optional{?qname RLWF:wikidataLabelFilter ?qfilter}.
+ filter contains(str(?qname),'""" + question_name + """').
+        }
+                         """)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    q_name = ""
+    q_id = ""
+    qfilter = ""
+    for result in results["results"]["bindings"]:
+        q_name = result["qname"]["value"]
+        q_id = result["q_id"]["value"]
+        qfilter = result["qfilter"]["value"] if ("qfilter" in result) else None
+
+    return q_name, q_id, (str(qfilter))

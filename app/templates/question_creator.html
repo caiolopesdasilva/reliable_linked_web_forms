@@ -11,37 +11,46 @@
         <div class="col12">
             <h2>Question Creator</h2>
             <hr/>
-            <p>In order to create a new instance of a question type, you need to do the Following steps</p>
-            <p>1 - Name the question type, The advice is to use the name + Question(e.g "FoodQuestion")</p>
+            <p>In order to create a new instance of a question type in the local triple store:</p>
+            <p>1 - Name the question similarly to the existing pattern name + Question(e.g "FoodQuestion").</p>
             <p>2 - Find the wikidata entity identifier, (e.g Q38723 - <a href="https://www.wikidata.org/wiki/Q38723">higher
-                education institution</a>)</p>
-            <p>3 - This initial implementation goal is to list all instances and sub-classes of the selected entity, but
-                it can't predict weather the results are good or not. you can also add filters in the field</p>
-            <p>4 - Some SPARQL knowledge is advisable, after inserting the name and the entity identifier, you can query
-                the RLWF triple-store to see if it was correctly created. Otherwise contact the system administraction
-                for the deletion of the wrong value</p>
+                education institution</a>).</p>
+            <p>3 - This initial implementation goal is to list all instances of the selected entity identifier, but
+                it can't predict weather the results are good or not. Filters can help.</p>
+            <p>4 - Some SPARQL knowledge is required, after inserting the name and the entity identifier, you can query
+                the RLWF triple-store to see if it was correctly created.</p>
+            <p>5 - Some HTML knowledge is also required, the question explorer page does not support the dynamic listing
+                of new questions. the elif function from line 131 to 142 in question_explorer.html needs to be
+                replicated with the correct
+                question values.</p>
         </div>
         <form action="" method="post">
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="input_q_type">Question Name</label>
-                    <input type="text" class="form-control" id="input_q_type">
+                    <label for="input_q_name">Question name*</label>
+                    <input type="text" class="form-control" id="input_q_name" name="input_q_name" required="true">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Entity ID</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="entity_id">Entity ID*</label>
+                    <input type="text" class="form-control" id="entity_id" name="entity_id" required="true">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Filter</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="filter">Filter*</label>
+                    <input type="text" class="form-control" id="filter" name="filter" required="true">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Filter Not Contains</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="filternotcontains">Filter not contains(Disabled)</label>
+                    <input type="text" readonly class="form-control" id="filternotcontains">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="comments">Question Description*</label>
+                    <input type="text" class="form-control" id="comments" name="comments" required="true">
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <hr class="my-4">
 

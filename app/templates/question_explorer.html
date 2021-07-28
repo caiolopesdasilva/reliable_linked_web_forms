@@ -20,6 +20,10 @@
     $('.degree_select').select2();
 });
 
+    $(document).ready(function() {
+    $('.custom_q_select').select2();
+});
+
 
 
 </script>
@@ -125,6 +129,22 @@
                         </select>
                     </div>
                 </div>
+
+
+                {% elif question_select == c_question %}
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="custom_q_select"><strong>Available values</strong></label>
+                        <select class="custom_q_select" data-width="100%" id="col-md-12"
+                                name="custom_q_select">
+                            {% for x in c_q_values %}
+                            <option>{{x}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
 
                 {% else %}
 

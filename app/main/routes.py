@@ -78,6 +78,9 @@ def question_explorer():
 
     if request.method == "POST":
         question_select = request.form["question_select"]
+        c_question = dataset.get_question_information(question_select)
+        y = dataset.wdt_custom_question(c_question[1], c_question[2])
+        print(y)
         question_index = list_of_questions.index(question_select)
         comment = question_comments[question_index]
         wikidata_queryable = wdt[question_index]
@@ -88,7 +91,8 @@ def question_explorer():
         return render_template("question_explorer.html", list_of_questions=list_of_questions,
                                comment=comment, wikidata_queryable=wikidata_queryable, countries=countries[1],
                                question_select=question_select, degrees=degrees[1], nl_universities=nl_universities[1],
-                               communication_channels=communication_channels[1], isIndex=True)
+                               communication_channels=communication_channels[1], isIndex=True, c_question=c_question[0],
+                               c_q_values=y[1])
 
     else:
         return render_template('question_explorer.html', list_of_questions=list_of_questions, isIndex=False)
@@ -101,4 +105,28 @@ def signup():
 
 @main.route('/question_creator', methods=['GET', 'POST'])
 def question_creator():
-    return render_template('question_creator.html')
+    if request.method == "POST":
+        question_name = request.form["input_q_name"]
+        entity_id = request.form["entity_id"]
+        query_filter = request.form["filter"]
+        comments = request.form["comments"]
+
+        exists = dataset.custom_question_analyser(entity_id)
+
+        # if exists:
+        # print("this entity_id is already registered, we cannot create it")
+        # return render_template('question_creator.html')
+
+        # else:
+        print("This is a entity_id, we will create the new question type.")
+        dataset.register_custom_question(question_name, entity_id, query_filter, comments);
+        global all_questions
+        all_questions = []
+        all_questions = dataset.list_all_questions()
+        custom_question = dataset.wdt_custom_question(entity_id, query_filter)
+        print(custom_question)
+
+        return render_template('question_creator.html')
+
+    else:
+        return render_template('question_creator.html')
