@@ -15,7 +15,7 @@ def answer_processor(answers1, selected_title, form_instance, q_uids, q_types, c
     degrees_list = degrees[1]
     degrees_uris = degrees[0]
 
-    print(answers1)
+    #print(answers1)
     name = answers1[0]
     email = answers1[1]
     uni = answers1[2]
@@ -79,5 +79,4 @@ def answer_processor(answers1, selected_title, form_instance, q_uids, q_types, c
     cluster_counter = (int(cluster_counter)) + 1  # this convertion feels a bit rough for me, but it works.
     answer_cluster_uid = dataset.create_answer_cluster(individual_answers_name, prov_activity_id, agent_uid,
                                                        cluster_counter, form_instance)
-    print("This Answer cluster was created")
-    print(answer_cluster_uid)
+    print("This Answer cluster was created" + answer_cluster_uid)

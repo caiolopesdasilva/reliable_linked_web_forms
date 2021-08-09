@@ -17,7 +17,7 @@ sparql_wdt = SPARQLWrapper("https://query.wikidata.org/sparql",
 def list_all_forms():
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-        SELECT (str(?title) as ?Title) WHERE  {
+        SELECT (str(?title) as ?Title) FROM <http://localhost:8890/RLWF> WHERE  {
           ?x RLWF:form_title ?title.
           ?x RLWF:form_counter ?counter.
         }
@@ -39,7 +39,7 @@ def list_all_questions():
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         
         SELECT DISTINCT (str(?x) as ?Question_Type) (str(?y) as ?wdt) 
-        (str(?z)) as ?comment WHERE {
+        (str(?z)) as ?comment FROM <http://localhost:8890/RLWF> WHERE {
           ?entity a owl:Class.
           ?type rdfs:subClassOf* RLWF:Question.
           ?type rdfs:label ?x.
@@ -96,12 +96,12 @@ def select_form(selected_title):
 
 def list_form_questions(selected_title):
     sparql.setQuery("""
-    
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         
-        SELECT DISTINCT (strafter(str(?x), "#") AS ?form_instance) (strafter(str(?entity), "#") AS ?entity) (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
-        WHERE {
+        SELECT DISTINCT (strafter(str(?x), "#") AS ?form_instance) (strafter(str(?entity), "#") AS ?entity) 
+        (str(?counter) as ?qcounter) (str(?text) as ?text) (str(?q) as ?questiontype) (str(?wdt) as ?wdt)
+        FROM <http://localhost:8890/RLWF> WHERE {
         
           ?x RLWF:hasQuestion ?entity.
           ?x RLWF:form_title '""" + selected_title + """'^^xsd:string.
@@ -112,7 +112,7 @@ def list_form_questions(selected_title):
           ?entity RLWF:question_counter ?counter.
           OPTIONAL{?type RLWF:containsWDT ?wdt}.
         }
-        ORDER BY asc(?entity)
+        ORDER BY asc(?qcounter)
                  """)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
@@ -246,7 +246,7 @@ def check_agent(agent_name):
     sparql.setQuery("""
     PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
     ask 
-    WHERE {
+    FROM <http://localhost:8890/RLWF> WHERE {
     ?person RLWF:agent_email ?email.
     filter contains(?email,'""" + agent_name + """')
     }
@@ -259,7 +259,7 @@ def check_agent(agent_name):
 def get_agent_uid(email):
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
-        select distinct (strafter(str(?person), "#") AS ?person)
+        select distinct (strafter(str(?person), "#") AS ?person) FROM <http://localhost:8890/RLWF>
         WHERE {
         ?person a owl:NamedIndividual.
         ?person RLWF:agent_email ?email.
@@ -293,8 +293,7 @@ def insert_new_agent(name, email):
     }
     }
     """)
-    results = sparql.query()
-    print(results.response.read())
+    #results = sparql.query() this can be printed to see the output
     return uuid
 
 
@@ -317,8 +316,8 @@ def register_act_respond(uid):
     }
     }
     """)
-    results = sparql.query()
-    print(results.response.read())
+    # results = sparql.query()
+    # print(results.response.read())
     return act_uid
 
 
@@ -339,8 +338,8 @@ def reg_individual_answer(answer, q_uids, x):
         }
         }
         """)
-    results = sparql.query()
-    print(results.response.read())
+    # results = sparql.query()
+    # print(results.response.read())
     return individual_answer_uid
 
 
@@ -362,8 +361,8 @@ def reg_wdt_individual_answer_1uri(answer, q_uids, x, wdt_uri):
         }
         }
         """)
-    results = sparql.query()
-    print(results.response.read())
+    # results = sparql.query()
+    # print(results.response.read())
     return answer_uid
 
 
@@ -386,8 +385,8 @@ def reg_wdt_individual_answer_2uri(answer, q_uids, x, wdt_uri1, wdt_uri2):
         }
         }
         """)
-    results = sparql.query()
-    print(results.response.read())
+    # results = sparql.query()
+    # print(results.response.read())
     return answer_uid
 
 
@@ -395,7 +394,7 @@ def get_cluster_counter(selected_title):
     sparql.setQuery("""
         PREFIX RLWF: <https://raw.githubusercontent.com/caiolopesdasilva/reliable_linked_web_forms/main/onto/RLWF.owl#>
         
-        SELECT (str(?cluster_counter) as ?cluster_counter)  WHERE  {
+        SELECT (str(?cluster_counter) as ?cluster_counter) FROM <http://localhost:8890/RLWF>  WHERE  {
           ?y a RLWF:AnswerCluster.
           ?y RLWF:answerCluster_counter ?cluster_counter.
           ?y RLWF:containsAnswersFrom ?z. 
@@ -439,8 +438,8 @@ def create_answer_cluster(individual_answers_name, prov_activity_id, uid, cluste
         }
         }
     """)
-    results = sparql.query()
-    print(results.response.read())
+    # results = sparql.query()
+    # print(results.response.read())
     return answer_cluster_id
 
 
@@ -463,12 +462,11 @@ def register_custom_question(question_name, entity_id, query_filter, comments):
     }
     """)
     results = sparql.query()
-    print(results.response.read())
 
 
 def wdt_custom_question(entity_id, query_filter):
     sparql_wdt.setQuery("""
-    SELECT ?entities ?label_en
+    SELECT ?entities ?label_en 
     WHERE
     {
       ?entities wdt:P31 wd:""" + entity_id + """.

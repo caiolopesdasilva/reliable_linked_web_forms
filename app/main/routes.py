@@ -27,7 +27,6 @@ def main_form():
         selected_title = request.form["selected_title"]
         return redirect(url_for("main.list_form", selected_title=selected_title))
     else:
-        # titles = dataset.list_all_forms()
         return render_template('example.html', titles=titles)
 
 
@@ -80,7 +79,6 @@ def question_explorer():
         question_select = request.form["question_select"]
         c_question = dataset.get_question_information(question_select)
         y = dataset.wdt_custom_question(c_question[1], c_question[2])
-        print(y)
         question_index = list_of_questions.index(question_select)
         comment = question_comments[question_index]
         wikidata_queryable = wdt[question_index]
@@ -112,21 +110,17 @@ def question_creator():
         comments = request.form["comments"]
 
         exists = dataset.custom_question_analyser(entity_id)
-
-        # if exists:
-        # print("this entity_id is already registered, we cannot create it")
-        # return render_template('question_creator.html')
-
-        # else:
-        print("This is a entity_id, we will create the new question type.")
-        dataset.register_custom_question(question_name, entity_id, query_filter, comments);
-        global all_questions
-        all_questions = []
-        all_questions = dataset.list_all_questions()
-        custom_question = dataset.wdt_custom_question(entity_id, query_filter)
-        print(custom_question)
-
-        return render_template('question_creator.html')
-
+        if exists:
+            print("this entity_id is already registered, we cannot create it")
+            return render_template('question_creator.html')
+        else:
+            print("This is a entity_id, we will create the new question type.")
+            dataset.register_custom_question(question_name, entity_id, query_filter, comments);
+            global all_questions
+            all_questions = []
+            all_questions = dataset.list_all_questions()
+            custom_question = dataset.wdt_custom_question(entity_id, query_filter)
+            print(custom_question)
+            return render_template('question_creator.html')
     else:
         return render_template('question_creator.html')
