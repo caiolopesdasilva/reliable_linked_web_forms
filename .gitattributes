@@ -1,1 +1,1 @@
-src/main/notebooks* linguist-vendored
+*.ipynb linguist-detectable=false
